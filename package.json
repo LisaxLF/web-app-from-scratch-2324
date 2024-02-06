@@ -1,0 +1,22 @@
+{
+  "name": "web-app-from-scratch-2324",
+  "version": "1.0.0",
+  "description": "In dit vak gaan we een web applicatie bouwen en leren hoe deze werken door zo min mogelijk libraries, frameworks of\r andere bronnen te importen (vanilla) en zoveel mogelijk het browser platform te gebruiken door middel van HTML, CSS &\r JavaScript.    \r Het eindresultaat is een modulaire, single page web app (SPA), beoordeeld op jouw niveau en eigen leerdoelen.    \r De bedoeling is om een web app te bouwen die data ophaalt van een externe API, deze manipuleert om te tonen in de UI van\r de App, hoe abstract dan ook.\r Je gaat bekende patterns leren toe passen bij het bouwen en testen van de applicatie voor een eigen \"WebSite\" en een\r gezamenlijke \"Team App\".\r Nog nooit heb je zo snel kunnen prototypen als nadat je hebt leren werken met de browser en haar talen.\r Daarnaast zal je tijdloze kennis opdoen over het de aard en het gebruik van data, datastructuren, algoritmes, libraries,\r frameworks en de werking van het web.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.0.3"
+  }
+}
