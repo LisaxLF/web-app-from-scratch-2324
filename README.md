@@ -7,7 +7,6 @@ This is my portfolio landing page, where you can learn more about me, my skills,
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Technologies
