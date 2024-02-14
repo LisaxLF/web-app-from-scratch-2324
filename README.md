@@ -28,8 +28,6 @@ https://github.com/LisaxLF/web-app-from-scratch-2324.git
 2. Install the necessary dependencies:
 npm install
 
-## Gebruik
-
 ## Usage
 
 1. Start the Express server:
