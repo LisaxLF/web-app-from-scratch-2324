@@ -705,10 +705,8 @@ section:nth-of-type(4)>article:first-of-type {
 }
 
 
-
-
 /* Desktop breakpoints (400px tot 1200px) */
-@media (min-width: 400px) and (max-width: 1199px) {
+@media (min-width: 400px) and (max-width: 1280px) {
     h1 {
         font-size: 3.8rem;
     }
@@ -802,7 +800,7 @@ section:nth-of-type(4)>article:first-of-type {
 }
 
 /* Grote desktops (1200px en groter) */
-@media (min-width: 1200px) {
+@media (min-width: 1281px) {
     h1 {
         font-size: 6rem;
     }
