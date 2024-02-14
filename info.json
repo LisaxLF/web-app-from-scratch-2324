@@ -1,4 +1,4 @@
-{
+[{
     "firstName": "Lisa",
     "lastName": "Fokkinga",
     "avatar_url": "",
@@ -8,4 +8,4 @@
     "truthsAndLies" : ["Ik heb rood haar", "Ik hou van vis", "Mijn partner is een beroemd persoon"],
     "bio" : "optioneel",
     "favouriteAnimal" : "optioneel"
-}
+}]
