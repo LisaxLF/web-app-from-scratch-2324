@@ -1,0 +1,43 @@
+[{
+        "name": "Node.js",
+        "percentage": 20,
+        "level": "Basic",
+        "img": "./images/skills/node.png"
+    },
+    {
+        "name": "HTML",
+        "percentage": 80,
+        "level": "Advanced",
+        "img": "./images/skills/HTML.png"
+    },
+    {
+        "name": "CSS",
+        "percentage": 80,
+        "level": "Advanced",
+        "img": "./images/skills/css.png"
+    },
+    {
+        "name": "Javascript",
+        "percentage": 50,
+        "level": "Intermediate",
+        "img": "./images/skills/javascript.png"
+    },
+    {
+        "name": "Tailwind",
+        "percentage": 20,
+        "level": "Basic",
+        "img": "./images/skills/tailwind.png"
+    },
+    {
+        "name": "Wordpress",
+        "percentage": 20,
+        "level": "Basic",
+        "img": "./images/skills/wordpress.png"
+    },
+    {
+        "name": "Svelte",
+        "percentage": 10,
+        "level": "Basic",
+        "img": "./images/skills/svelte.png"
+    }
+]

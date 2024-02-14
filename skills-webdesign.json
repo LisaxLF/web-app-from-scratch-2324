@@ -1,0 +1,37 @@
+ [{
+         "name": "Sketch",
+         "percentage": 50,
+         "level": "Intermediate",
+         "img": "./images/skills/Sketch.png"
+     },
+     {
+         "name": "Figma",
+         "percentage": 90,
+         "level": "Advanced",
+         "img": "./images/skills/Figma.png"
+     },
+     {
+         "name": "Illustrator",
+         "percentage": 80,
+         "level": "Advanced",
+         "img": "./images/skills/Illustrator.png"
+     },
+     {
+         "name": "Photoshop",
+         "percentage": 30,
+         "level": "Basic",
+         "img": "./images/skills/Photoshop.png"
+     },
+     {
+         "name": "Premiere Pro",
+         "percentage": 30,
+         "level": "Basic",
+         "img": "./images/skills/Premiere-Pro.png"
+     },
+     {
+         "name": "Microsoft 365",
+         "percentage": 80,
+         "level": "Advanced",
+         "img": "./images/skills/microsoft-office.png"
+     }
+ ]

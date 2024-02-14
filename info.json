@@ -1,0 +1,11 @@
+{
+    "firstName": "Lisa",
+    "lastName": "Fokkinga",
+    "avatar_url": "",
+    "age": 23,
+    "city": "Amsterdam",
+    "hobbies" : ["Traveling", "Music", "Gaming", "Exploring"],
+    "truthsAndLies" : ["Ik heb rood haar", "Ik hou van vis", "Mijn partner is een beroemd persoon"],
+    "bio" : "optioneel",
+    "favouriteAnimal" : "optioneel"
+}

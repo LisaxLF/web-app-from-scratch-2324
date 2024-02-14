@@ -1,9 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--color-primary-bg);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     position: relative;
+    overflow-x: hidden;
+}
+
+html, body {
+    scroll-snap-type: y proximity;
 }
 
 h1,
@@ -15,21 +23,48 @@ h6,
 li,
 a {
     font-family: var(--font-family-headers);
+    color: var(--color-secondary-text-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 6.25rem;
     color: var(--color-secondary-text-white);
+    position: relative;
 }
 
 h1::after {
-    -webkit-text-stroke-width: 3px;
+    content: "LETS TAKE YOU ON A JOURNEY";
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    -webkit-text-stroke-width: .5px;
+    /* Breedte van de omlijning */
     -webkit-text-stroke-color: var(--color-secondary-text-white);
+    /* Kleur van de omlijning */
+    -webkit-text-fill-color: transparent;
+    /* Vultekst transparant maken */
 }
 
 h2 {
-    font-size: 2rem;
-    color: var(--color-secondary-text-white);
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+
+}
+
+h4 {
+    font-size: 1.563rem;
 }
 
 li,
@@ -46,11 +81,23 @@ span {
     color: var(--color-secondary-text-white);
 }
 
+p {
+    font-size: 1.125rem;
+    line-height: 25px;
+    font-weight: 200;
+}
+
+span {
+    font-size: 0.875rem;
+}
+
+
+
 /* navigatie */
 
 header {
     color: var(--color-secondary-text-white);
-    padding: .6em .5em;
+    padding: .6em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,11 +112,6 @@ header img {
     width: 8rem;
 
 }
-
-nav {
-    border-bottom: 1px solid var(--color-secondary-text-white);
-}
-
 nav ul {
     display: flex;
     gap: 2rem;
@@ -81,7 +123,23 @@ nav ul li a {
     color: var(--color-secondary-text-white);
 }
 
-/* section 1 - landing */
+nav ul li a:hover{
+    border-bottom: 1px solid white;
+    padding-bottom: .5em;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section {
+    height: 100vh;
+    padding: 2em 2em;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+
+/* SECTION 1 - LANDING */
+
+/* background grain */
 section:first-of-type {
     height: 100vh;
     display: flex;
@@ -93,8 +151,8 @@ section:first-of-type {
 
 section:first-of-type>img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     position: absolute;
     left: 0;
@@ -104,4 +162,428 @@ section:first-of-type>img {
     mix-blend-mode: overlay;
 
     z-index: -1;
+}
+
+/* shape  */
+section:first-of-type div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    position: relative;
+}
+
+section:first-of-type div:first-of-type>svg {
+    position: absolute;
+    mix-blend-mode: color-dodge;
+    z-index: 10;
+    animation: rotate 20S linear infinite;
+}
+
+section:first-of-type div:first-of-type svg path {
+    animation: colorChange 20s linear infinite;
+}
+
+/* rotating svg */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* color changing svg */
+@keyframes colorChange {
+    0% {
+        fill: rgb(63, 60, 120);
+    }
+
+    50% {
+        fill: rgb(39, 147, 153);
+    }
+
+    75% {
+        fill: rgb(21, 129, 179);
+    }
+
+    100% {
+        fill: rgb(63, 60, 120);
+    }
+}
+
+/* TAG STYLE */
+.tag-style {
+    background-color: var(--color-primary-bg);
+    box-shadow: var(--shadow);
+    padding: 0.6em 1em;
+    border-radius: 2px;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+}
+
+/* SECTION 2 - ABOUT ME */
+/* grid for sections */
+section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+section:nth-of-type(2)>article:first-of-type>div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-tags);
+}
+
+section:nth-of-type(2)>article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 0.2em;
+    z-index: 1;
+}
+
+section:nth-of-type(2)>div:last-of-type {
+    display: flex;
+    grid-column: 4 / span 3;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* tekst effect */
+/* section:nth-of-type(2) > article:first-of-type  > h2{
+    position: relative;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0.2em 0;
+    background-color: #1a1a1a96;
+}
+section:nth-of-type(2) > article:first-of-type  > h2::after {
+    content: "ABOUT ME";
+    position: absolute;
+    font-size: .6em;
+    top: -25px;
+    z-index: -1;
+    left: 0;
+    -webkit-text-stroke-width: .5px; /* Breedte van de omlijning */
+/* -webkit-text-stroke-color: var(--color-secondary-text-white); Kleur van de omlijning */
+/* -webkit-text-fill-color: transparent; Vultekst transparant maken */
+/* } */
+
+section:nth-of-type(2)>div:first-of-type::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(133, 186, 212, 0.619) 62%, rgba(26, 26, 26, 1) 63%);
+    filter: blur(50px);
+    z-index: -1;
+}
+
+/* img foto lisa */
+section:nth-of-type(2)>div:last-of-type img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* buttons & links */
+section:nth-of-type(2)>article:first-of-type div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+
+}
+
+section:nth-of-type(2)>article:first-of-type a {
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+section:nth-of-type(2)>article:first-of-type a:last-of-type {
+    background-color: var(--color-secondary-text-white);
+    color: var(--color-primary-bg);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.2em 1em;
+}
+
+section:nth-of-type(2)>article:first-of-type a:last-of-type:hover svg path#arrow {
+    animation: moveUpDown 1s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+        /* Beginpositie */
+    }
+
+    50% {
+        transform: translateY(3px);
+        /* Positie halverwege, omhoog */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Eindpositie, terug naar beneden */
+    }
+}
+
+/* SECTION 3 - SKILLS */
+section:nth-of-type(3)>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    mix-blend-mode: overlay;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+section:nth-of-type(3) {
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* intro content */
+section:nth-of-type(3) article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 50%;
+    margin-bottom: 3em;
+}
+
+section:nth-of-type(3) article:first-of-type h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.8rem;
+}
+
+/* sliding skill cards */
+.scrollSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.scroll {
+    display: flex;
+    width: 90%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.scroll:first-of-type {
+    margin-bottom: 1.5em;
+}
+
+.scroll:first-of-type>.scroll-wrapper {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    display: inline-flex;
+    animation: scroll 25s linear infinite;
+}
+
+.scroll:last-of-type>.scroll-wrapper {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    display: inline-flex;
+    animation: scroll 25s linear infinite reverse;
+}
+
+.scroll:last-of-type>.scroll-wrapper>.card:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* cards */
+.card {
+    margin-right: 1em;
+    /* Ruimte tussen de kaarten */
+    width: 100%;
+    height: 180px;
+    width: 150px;
+    perspective: 1000px;
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-primary-bg);
+    box-shadow: var(--shadow);
+    /* mix-blend-mode: color-dodge; */
+}
+
+.front {
+    color: black;
+    gap: 1.2rem;
+}
+
+.front>p {
+    margin: 0;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.back {
+    color: white;
+    transform: rotateY(180deg);
+    gap: 1.2rem;
+}
+
+.back span {
+    font-size: 2.5em;
+    font-style: bold;
+}
+
+.icons {
+    width: 64px;
+    height: 64px;
+}
+
+/* section 4 */
+section:nth-of-type(4) {
+    height: max-content;
+}
+section:nth-of-type(4)>div {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 150px);
+    gap: 1em;
+}
+
+section:nth-of-type(4)>article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 50px;
+}
+
+.project {
+    position: relative;
+    gap: 1em;
+    background-color: var(--color-primary-bg);
+    box-shadow: var(--shadow);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.project .bg-mask img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    object-position: top;
+}
+
+.project .bg-mask>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.project svg circle {
+    filter: blur(100px);
+}
+
+.project .title {
+    display: flex;
+    flex-direction: column;
+}
+
+.project .text-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+    z-index: 5;
+}
+
+.project .tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
+}
+
+.project h4 {
+    font-size: 1.2rem;
+    background: -webkit-linear-gradient(#c6c6c6, var(--color-primary-bg));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project .bg-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

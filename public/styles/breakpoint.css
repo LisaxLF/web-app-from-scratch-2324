@@ -1,0 +1,265 @@
+/* Mobiele breakpoint (minder dan 400px) */
+@media (max-width: 599px) {
+    header {
+        padding: 1em;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: .8rem;
+        line-height: 22px;
+        font-weight: 200;
+
+    }
+
+    a {
+        font-size: .9em;
+        font-weight: 400;
+    }
+
+    section:nth-of-type(2)>div:last-of-type {
+        opacity: 0;
+    }
+
+    section:first-of-type div:first-of-type>svg {
+        max-width: 300px;
+    }
+
+    section:nth-of-type(3) article:first-of-type h2 {
+        font-size: 1.8rem;
+    }
+
+    section:nth-of-type(3) article:first-of-type {
+        width: 300px;
+    }
+
+    /* CARDS */
+    .card {
+        margin-right: .8em;
+        /* Ruimte tussen de kaarten */
+        width: 100%;
+        height: 100px;
+        width: 80px;
+        perspective: 1000px;
+    }
+
+    .front,
+    .back {
+        gap: .5rem;
+    }
+
+    .front>p {
+        margin: 0;
+        font-size: .8em;
+        font-style: italic;
+    }
+
+    .icons {
+        width: 16px;
+        height: 16px;
+    }
+
+    .back span {
+        font-size: 1.5em;
+        font-style: bold;
+    }
+
+    section:nth-of-type(4){
+        height: 100vh;
+    }
+
+    section:nth-of-type(4)>div {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        gap: 1em;
+    }
+    section:nth-of-type(4)>article:first-of-type {
+        margin-bottom: 30px;
+    }
+        
+}
+
+/* AFbeelding Lisa */
+@media (min-width: 600px) and (max-width: 800px) {
+
+    section:nth-of-type(2)>div:last-of-type {
+        right: -20%;
+    }
+}
+
+
+/* Infinite Carousel */
+@media (min-width: 900px){
+    section:nth-of-type(4) {
+        height: 100vh;
+    }
+
+    .scroll {
+        width: 70%;
+    }
+}
+
+
+
+
+/* Desktop breakpoints (400px tot 1200px) */
+@media (min-width: 400px) and (max-width: 1199px) {
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: .8rem;
+        line-height: 22px;
+        font-weight: 200;
+
+    }
+
+    a {
+        font-size: .9em;
+        font-weight: 400;
+    }
+
+    section:first-of-type div:first-of-type>svg {
+        max-width: 300px;
+    }
+
+    section:nth-of-type(2) article:first-of-type>h2 {
+        width: 50%;
+    }
+
+    section:nth-of-type(2) article:first-of-type>div:first-of-type {
+        margin: .5em 0;
+    }
+
+    section:nth-of-type(2) article:first-of-type>p {
+        margin-bottom: .5em;
+    }
+
+    section:nth-of-type(3) article:first-of-type>h2 {
+        font-size: 1.8rem;
+    }
+
+    section:nth-of-type(3) article:first-of-type {
+        width: 60%;
+        margin-bottom: 1.5em;
+    }
+
+    /* CARDS */
+    .card {
+        margin-right: .8em;
+        /* Ruimte tussen de kaarten */
+        width: 100%;
+        height: 120px;
+        width: 100px;
+        perspective: 1000px;
+    }
+
+    .front,
+    .back {
+        gap: .5rem;
+    }
+
+    .front>p {
+        margin: 0;
+        font-size: .8em;
+        font-style: italic;
+    }
+
+    .icons {
+        width: 32px;
+        height: 32px;
+    }
+
+    .back span {
+        font-size: 1.5em;
+        font-style: bold;
+    }
+
+
+    section:nth-of-type(4)>article:first-of-type {
+        max-width: 500px;
+        margin-bottom: 25px;
+    }
+
+    .project h4 {
+        font-size: 1rem;
+    }
+
+}
+
+/* Grote desktops (1200px en groter) */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 25px;
+        font-weight: 200;
+    }
+
+    span,
+    .tag-style {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    section {
+        padding: 2em 5em;
+    }
+
+    section:first-of-type div:first-of-type>svg {
+        max-width: 600px;
+    }
+
+    section:nth-of-type(2)>article:first-of-type {
+        max-width: 600px;
+        gap: 1em;
+    }
+
+    section:nth-of-type(4) {
+        height: 100vh;
+    }
+
+    .scroll {
+        width: 80%;
+    }
+
+}

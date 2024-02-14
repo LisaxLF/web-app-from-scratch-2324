@@ -17,7 +17,7 @@
             <img src="./images/grain-texture.jpg" alt="background image grain">
             <div>
                 <h1>LETS TAKE YOU ON A JOURNEY</h1>
-                <svg width="100" height="100" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="500" height="500" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="logo" style="mix-blend-mode:soft-light">
                         <g id="big circle">
                             <path id="side-p2" fill-rule="evenodd" clip-rule="evenodd"
@@ -31,7 +31,162 @@
                 </svg>
             </div>
         </section>
+        <section>
+            <article>
+                <h2>Lisa lotte Fokkinga</h2>
+                <div>
+                    <span class="tag-style">Web designer</span>
+                    <span class="tag-style">Web developer</span>
+                </div>
+                <p>
+                    Hi, I'm Lisa Lotte Fokkinga, a 24-year-old student at Hogeschool van Amsterdam. I'm currently in my
+                    third year of Communication and Multimedia Design. My focus lies in Web design and development.
+                </p>
+                <p>
+                    Learn more about my personality and values, or simply download my CV for detailed educational
+                    information. </p>
+                <div>
+                    <a href="/projects">About me</a>
+                    <a href="/cv">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="download">
+                                <path id="stroke" fill-rule="evenodd" clip-rule="evenodd" d="M0 14.4H16V16H0V14.4Z"
+                                    fill="#1B1C1C" />
+                                <path id="arrow" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.82809 0V10.0528L12.8921 7.40266L14 8.29461L8.55396 11.846C8.23904 12.0514 7.76096 12.0514 7.44604 11.846L2 8.29461L3.10793 7.40266L7.17191 10.0528V0H8.82809Z"
+                                    fill="#1B1C1C" />
+                            </g>
+                        </svg>
+                        CV
+                    </a>
+                </div>
+            </article>
+            <div>
+                <img src="./images/lisa-lotte.png" alt="Lisa Lotte Fokkinga">
+            </div>
+        </section>
+        <section>
+            <img src="./images/grain-texture2.jpg" alt="background image grain">
+            <article>
+                <h2>
+                    My skills and gains
+                </h2>
+                <p>It's time for me to elaborate on what I bring to the table and the skills I can offer. Here's a brief
+                    overview of the skills I possess for both web design and development</p>
+            </article>
+            <div class="scroll">
+                <div class="scroll-wrapper">
+                    <!-- Data uit het JSON-bestand -->
+                    <% for (const key in skillsWebDev) { %>
+                    <% const SkillWebDev = skillsWebDev[key]; %>
+                    <div class="card">
+                        <div class="content">
+                            <div class="front">
+                                <img class="icons" src="<%= SkillWebDev.img %>" alt="<%= SkillWebDev.name %>">
+                                <p><%= SkillWebDev.name %></p>
+                            </div>
+                            <div class="back">
+                                <span><%= SkillWebDev.percentage %>%</span>
+                                <p><%= SkillWebDev.level %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="scroll-wrapper">
+                    <!-- Data uit het JSON-bestand -->
+                    <% for (const key in skillsWebDev) { %>
+                    <% const SkillWebDev = skillsWebDev[key]; %>
+                    <div class="card">
+                        <div class="content">
+                            <div class="front">
+                                <img class="icons" src="<%= SkillWebDev.img %>" alt="<%= SkillWebDev.name %>">
+                                <p><%= SkillWebDev.name %></p>
+                            </div>
+                            <div class="back">
+                                <span><%= SkillWebDev.percentage %>%</span>
+                                <p><%= SkillWebDev.level %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="scroll">
+                <div class="scroll-wrapper">
+                    <% for (const key in skillsWebDesign) { %>
+                    <% const skillWebDesign = skillsWebDesign[key]; %>
+                    <div class="card">
+                        <div class="content">
+                            <div class="front">
+                                <img class="icons" src="<%= skillWebDesign.img %>" alt="<%= skillWebDesign.name %>">
+                                <p><%= skillWebDesign.name %></p>
+                            </div>
+                            <div class="back">
+                                <span><%= skillWebDesign.percentage %>%</span>
+                                <p><%= skillWebDesign.level %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="scroll-wrapper">
+                    <% for (const key in skillsWebDesign) { %>
+                    <% const skillWebDesign = skillsWebDesign[key]; %>
+                    <div class="card">
+                        <div class="content">
+                            <div class="front">
+                                <img class="icons" src="<%= skillWebDesign.img %>" alt="<%= skillWebDesign.name %>">
+                                <p><%= skillWebDesign.name %></p>
+                            </div>
+                            <div class="back">
+                                <span><%= skillWebDesign.percentage %>%</span>
+                                <p><%= skillWebDesign.level %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <section>
+            <article>
+                <h2>My projects</h2>
+                <p>Here are some of the projects I've worked on. I've included a brief description of each project and
+                    what I've learned from it. Feel free to check them out and let me know what you think!</p>
+            </article>
+            <div class="fullscreen">
+                <!-- Data uit het JSON-bestand -->
+                <% for (const key in projects) { %>
+                <% const project = projects[key]; %>
+
+                <div class="project">
+                    <div class="bg-mask">
+                        <div style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
+                        </div>
+                        <img src="./images/grain-texture.jpg" alt="background image grain">
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="title">
+                            <h4><%= project.type %></h4>
+                            <h3><%= project.title %></h3>
+                        </div>
+                        <div class="tags">
+                            <!-- for each lus for all grade title names -->
+                            <% for (const grade of project.grades) { %>
+                            <span class="tag-style"><%= grade.title %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+
+        </section>
     </main>
+    <script src="./js/scrollBlur.js"></script>
+    <script src="./js/scrollAnimation.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,48 @@
-const express = require('express')
-let ejs = require('ejs');
+const fs = require('fs');
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const app = express()
-const port = 3000
-
-// Set the view engine to ejs
+// Set de view engine naar EJS
 app.set('view engine', 'ejs');
 
-// Serve static files
+// Serveer statische bestanden
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('index.ejs');
-})
+// Render de index.ejs file
+app.get('/', async (_req, res) => {
+    try {
+        const dataWebDev = await readFile('skills-webdevelop.json');
+        const dataWebDesign = await readFile('skills-webdesign.json');
+        const projectsData = await readFile('projects.json');
+
+        const skillsWebDev = JSON.parse(dataWebDev);
+        const skillsWebDesign = JSON.parse(dataWebDesign);
+        const projects = JSON.parse(projectsData);
+
+        res.render('index', {
+            skillsWebDev,
+            skillsWebDesign,
+            projects
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error occurred while reading files.');
+    }
+});
+
+async function readFile(filename) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filename, 'utf8', (err, data) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(data);
+            }
+        });
+    });
+}
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+    console.log('Server is running on port 3000');
+});
