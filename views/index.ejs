@@ -161,12 +161,12 @@
                 <p>Here are some of the projects I've worked on. I've included a brief description of each project and
                     what I've learned from it. Feel free to check them out and let me know what you think!</p>
             </article>
-            <div class="fullscreen">
+            <div class="">
                 <!-- Data uit het JSON-bestand -->
                 <% for (const key in projects) { %>
                 <% const project = projects[key]; %>
 
-                <div class="project">
+                <div class="project" onclick="showProject('<%= project.title %>')">
                     <div class="bg-mask">
                         <div style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
                         </div>
@@ -186,6 +186,14 @@
                     </div>
                 </div>
                 <% } %>
+            </div>
+            <div class="fullscreen-project">
+                <div>
+                    <img>
+                    <svg>
+                        
+                    </svg>
+                </div>
             </div>
 
         </section>
