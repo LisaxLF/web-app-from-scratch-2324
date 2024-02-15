@@ -617,16 +617,13 @@ section:nth-of-type(4)>article:first-of-type {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100vw;
+    height: 100vh;
     opacity: 0;
     z-index: -10;
-    display: flex;
-}
-
-.fullscreen-project.active {
-    opacity: 1;
-    z-index: 10;
-    pointer-events: all;
-    transition: 5s ease-in-out linear;
+    background: var(--color-primary-bg);
+    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .fullscreen-project .left-side, .fullscreen-project .right-side {
