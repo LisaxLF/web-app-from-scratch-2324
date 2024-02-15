@@ -1,7 +1,9 @@
  [{
+     "id": 1,
      "title": "Blok Tech",
      "type": "Project",
      "description": "Project Tech is a hands-on learning experience where I'll learned about web things like how websites are built, creative coding, and managing projects efficiently. I picked up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
+     "mockup": "./images/mockups/website_rocketfinderz-mockup.png",
      "grades": [{
              "title": "Project",
              "grade": 7.5
@@ -18,6 +20,7 @@
      "linkGithub": "https://example.com/subject1",
      "colors": ["#BCE2F3", "#EECE79"]
  }, {
+     "id": 2,
      "title": "information design",
      "type": "Minor",
      "description": "Minor Information Design offers a focused program with three essential components: In Data Visualization, students learn to create clear and engaging visualizations using charts, graphs, and maps. The Tech Track provides skills in web technologies to present data effectively online. Through the Integration Project, students collaborate on real-world projects, combining technical expertise and design principles to deliver client solutions.",
@@ -37,6 +40,7 @@
      "linkGithub": "https://example.com/subject1",
      "colors": ["#B74F6B", "#89FFFF"]
  }, {
+     "id": 3,
      "title": "Web design & development",
      "type": "Minor",
      "description": "The minor Web Design and Development is a hands-on learning experience where I'll learn about web things like how websites are built, creative coding, and managing projects efficiently. I'll pick up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",

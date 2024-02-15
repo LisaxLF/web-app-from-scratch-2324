@@ -14,7 +14,7 @@
 
     <main>
         <section>
-            <img src="./images/grain-texture.jpg" alt="background image grain">
+            <img class="grain" src="./images/grain-texture.jpg" alt="background image grain">
             <div>
                 <div>
                     <h1 class=".text-animation">LETS TAKE YOU ON A JOURNEY</h1>
@@ -32,9 +32,12 @@
                     </g>
                 </svg>
             </div>
-            <svg class="mouse" width="64" height="93" viewBox="0 0 64 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0C14.3269 0 0 14.3269 0 32V61C0 78.6731 14.3269 93 32 93C49.6731 93 64 78.6731 64 61V32C64 14.3269 49.6731 0 32 0ZM32 9C29.2385 9 27 11.2385 27 14V19C27 21.7615 29.2385 24 32 24C34.7615 24 37 21.7615 37 19V14C37 11.2385 34.7615 9 32 9Z" fill="white"/>
-                </svg>                
+            <svg class="mouse" width="64" height="93" viewBox="0 0 64 93" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M32 0C14.3269 0 0 14.3269 0 32V61C0 78.6731 14.3269 93 32 93C49.6731 93 64 78.6731 64 61V32C64 14.3269 49.6731 0 32 0ZM32 9C29.2385 9 27 11.2385 27 14V19C27 21.7615 29.2385 24 32 24C34.7615 24 37 21.7615 37 19V14C37 11.2385 34.7615 9 32 9Z"
+                    fill="white" />
+            </svg>
         </section>
         <section>
             <article>
@@ -166,9 +169,10 @@
                 <% for (const key in projects) { %>
                 <% const project = projects[key]; %>
 
-                <div class="project" onclick="showProject('<%= project.title %>')">
+                <a class="project" onclick="showFullScreen('<%= project.id %>')">
                     <div class="bg-mask">
-                        <div style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
+                        <div
+                            style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
                         </div>
                         <img src="./images/grain-texture.jpg" alt="background image grain">
                     </div>
@@ -184,15 +188,46 @@
                             <% } %>
                         </div>
                     </div>
-                </div>
+                </a>
                 <% } %>
             </div>
             <div class="fullscreen-project">
-                <div>
-                    <img>
-                    <svg>
-                        
-                    </svg>
+                <div class="left-side">
+                    <div class="close" onclick="closeProject()">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.82809 0V10.0528L12.8921 7.40266L14 8.29461L8.55396 11.846C8.23904 12.0514 7.76096 12.0514 7.44604 11.846L2 8.29461L3.10793 7.40266L7.17191 10.0528V0H8.82809Z"
+                                fill="#1B1C1C" />
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-type"></h4>
+                        <h3 class="project-title"></h3>
+                        <div class="tags" id="project-tags">
+                            <!-- Hier word dynamische tags geleverd -->
+                        </div>
+                        <p class="project-description"></p>
+                        <a class="project-link" href="" target="_blank">View project</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img class="grain" src="./images/grain-texture.jpg" alt="background image grain">
+                    <div class="project-image">
+                        <img class="project-mockup" src="" alt="project image">
+                        <svg class="project-shape" width="500" height="500" viewBox="0 0 590 590" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="logo" style="mix-blend-mode:soft-light">
+                                <g id="big circle">
+                                    <path id="side-p2" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.17212 321.477C0.39624 312.755 0 303.924 0 295C0 175.742 70.7662 73.0132 172.597 26.5134L221.883 54.8159C118.924 86.1184 44 181.809 44 295C44 313.707 46.0465 331.936 49.9279 349.475L1.17212 321.477ZM588.53 265.362C589.502 275.11 590 284.997 590 295C590 413.13 520.566 515.042 420.284 562.152L371.49 534.132C472.708 501.783 546 406.951 546 295C546 275.066 543.676 255.676 539.285 237.084L588.53 265.362Z"
+                                        fill="#ECECEC" />
+                                    <path id="side-p1" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M284.655 589.822C183.407 586.333 95.1179 531.822 44.6992 451.2L70.3315 407.041C111.496 489.425 196.64 546 294.999 546C300.157 546 305.279 545.844 310.36 545.538L284.655 589.822ZM306.475 0.219104C407.65 4.08932 495.767 58.9132 545.897 139.761L520.199 184.032C479.24 101.067 393.784 44 294.999 44C290.245 44 285.522 44.1321 280.834 44.3929L306.475 0.219104Z"
+                                        fill="#ECECEC" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -200,6 +235,6 @@
     </main>
     <script src="./js/scrollBlur.js"></script>
     <script src="./js/scrollAnimation.js"></script>
+    <script src="./js/fetchingData.js"></script>
 </body>
-
 </html>

@@ -612,20 +612,73 @@ section:nth-of-type(4)>article:first-of-type {
 
 /* overlay full screen */
 .fullscreen-project {
-    opacity: 0;
     top: 0;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    opacity: 0;
+    z-index: -10;
+    display: flex;
+}
+
+.fullscreen-project.active {
     opacity: 1;
     z-index: 10;
-    background: var(--color-primary-bg);
-    overflow: hidden;
-    overflow-y: hidden;
+    pointer-events: all;
+    transition: 5s ease-in-out linear;
 }
+
+.fullscreen-project .left-side, .fullscreen-project .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.fullscreen-project .left-side {
+    transform: translateX(-100%);
+    background: var(--color-primary-bg);
+}
+
+.fullscreen-project .right-side {
+    transform: translateX(100%);
+    background: var(--color-primary-bg);
+}
+
+.fullscreen-project .left-side .project-link {
+
+}
+
+.fullscreen-project .right-side .grain {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+.fullscreen-project .right-side .project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.fullscreen-project .right-side .project-image svg {
+    width: 80%;
+    height: 80%;
+
+}
+
+.fullscreen-project .right-side .project-image .project-mockup {
+    position: absolute;
+}
+
+
+
+
 
 /* Mobiele breakpoint (minder dan 400px) */
 @media (max-width: 599px) {
