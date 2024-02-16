@@ -169,7 +169,7 @@
                 <% for (const key in projects) { %>
                 <% const project = projects[key]; %>
 
-                <a class="project" onclick="showFullScreen('<%= project.id %>')">
+                <a class="project" onclick="showFullScreen('<%= project.title %>')">
                     <div class="bg-mask">
                         <div
                             style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
@@ -193,21 +193,33 @@
             </div>
             <div class="fullscreen-project">
                 <div class="left-side">
-                    <div class="close" onclick="closeProject()">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="project-close" onclick="closeProject()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M8.82809 0V10.0528L12.8921 7.40266L14 8.29461L8.55396 11.846C8.23904 12.0514 7.76096 12.0514 7.44604 11.846L2 8.29461L3.10793 7.40266L7.17191 10.0528V0H8.82809Z"
-                                fill="#1B1C1C" />
+                                d="M0.359369 21.908C-0.119167 22.3865 -0.119167 23.1624 0.35937 23.6409C0.837906 24.1195 1.61377 24.1195 2.0923 23.6409L12.0001 13.7331L21.908 23.6409C22.3865 24.1194 23.1624 24.1194 23.6409 23.6409C24.1194 23.1624 24.1194 22.3865 23.6409 21.908L13.7331 12.0001L23.6414 2.09184C24.1199 1.6133 24.1199 0.837439 23.6414 0.358902C23.1628 -0.119634 22.387 -0.119634 21.9084 0.358902L12.0001 10.2672L2.09183 0.358902C1.6133 -0.119634 0.837438 -0.119634 0.358902 0.358903C-0.119634 0.837439 -0.119634 1.6133 0.358902 2.09184L10.2672 12.0001L0.359369 21.908Z"
+                                fill="white" />
                         </svg>
                     </div>
                     <div class="project-content">
                         <h4 class="project-type"></h4>
                         <h3 class="project-title"></h3>
-                        <div class="tags" id="project-tags">
+                        <div class="project-tags">
                             <!-- Hier word dynamische tags geleverd -->
                         </div>
                         <p class="project-description"></p>
-                        <a class="project-link" href="" target="_blank">View project</a>
+                        <a class="project-link" href="">View project
+                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="&#62;&#62;">
+                                    <path id="Vector"
+                                        d="M7.69385 8.57692L11.3185 5.98077L9.32726 4.59615C9.05762 4.41667 8.77761 4.21795 8.48722 4C8.20721 3.76923 7.94275 3.57051 7.69385 3.40385V0L14.352 4.75V7.23077L7.69385 12V8.57692Z"
+                                        fill="#1A1A1A" />
+                                    <path id="Vector_2"
+                                        d="M0 8.57692L3.62463 5.98077L1.63342 4.59615C1.36377 4.41667 1.08376 4.21795 0.793374 4C0.513359 3.76923 0.248902 3.57051 0 3.40385V0L6.65812 4.75V7.23077L0 12V8.57692Z"
+                                        fill="#1A1A1A" />
+                                </g>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="right-side">
@@ -237,4 +249,5 @@
     <script src="./js/scrollAnimation.js"></script>
     <script src="./js/fetchingData.js"></script>
 </body>
+
 </html>

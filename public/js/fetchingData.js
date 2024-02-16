@@ -1,46 +1,83 @@
 async function showFullScreen(projectTitle) {
+    console.log('showFullScreen:', projectTitle);
     // await get project data
     const projectData = await getProjectData(projectTitle);
-    // render the fullscreen.ejs file with the project data
-    // Fill in the project data
-    console.log(projectData);
+
+    // await render project data
+    await renderProjectData(projectData);
+
+    // await show project
+    await showProject();
 }
 
 //  Get assigned project data
 async function getProjectData(projectTitle) {
     // Fetch de projectgegevens op uit het JSON-bestand
-    const projectsData = await fetch('../projects.json');
+    const projectsData = await fetch('https://raw.githubusercontent.com/LisaxLF/web-app-from-scratch-2324/main/projects.json');
     const projects = await projectsData.json();
-    const fetchedProjectData = projects.find(project => project.title === projectTitle);
-    console.log(fetchedProjectData);
 
-    return fetchedProjectData;
+    // console the result
+    console.log('project:', projects);
+
+    // Get the project data based on the projectTitle
+    const projectData = projects.find(project => project.title === projectTitle);
+
+    console.log('projectData:', projectData);
+
+    return projectData;
+
 }
 
-// // Show the project with animation
-async function showProject(_projectData) {
-    fullscreenProject.classList.add('active');
+// Render the project data
+async function renderProjectData(projectData) {
+    // Fill in the project data
+    const projectTitle = document.querySelector('.project-title');
+    const projectType = document.querySelector('.project-type');
+    const projectDescription = document.querySelector('.project-description');
+    const projectTags = document.querySelector('.project-tags');
+    const projectLink = document.querySelector('.project-link');
 
-    // Reset de translate waarden van left en right side
-    document.querySelector('.left-side').style.transform = 'translateX(0)';
-    document.querySelector('.right-side').style.transform = 'translateX(0)';
+    projectTitle.textContent = projectData.title;
+    projectType.textContent = projectData.type;
+    projectDescription.textContent = projectData.description;
+
+
+    // render each tag
+    RenderTags(projectData);
+
+    // render the image
+    const projectImage = document.querySelector('.project-mockup');
+    projectImage.src = projectData.mockup;
+}
+
+// Show the project with animation
+async function showProject() {
+    const fullscreenProject = document.querySelector('.fullscreen-project');
+
+    fullscreenProject.classList.add('active');
 }
 
 // Hide the project with animation
 function closeProject() {
+    const fullscreenProject = document.querySelector('.fullscreen-project');
+
+    // remove the active class
     fullscreenProject.classList.remove('active');
+
 }
 
-async function fillData(projectData) {
-    // Fill in the project data
-    const projectTitle = document.querySelector('.project-title');
-    const projectDescription = document.querySelector('.project-description');
-    const projectSkills = document.querySelector('.project-skills');
-    const projectLink = document.querySelector('.project-link');
+function RenderTags(projectData) {
+    // clear the tags
+    const tagWrapper = document.querySelector('.project-tags');
+    tagWrapper.innerHTML = '';
 
-    projectTitle.textContent = projectData.title;
-    projectDescription.textContent = projectData.description;
-    projectSkills.textContent = projectData.skills;
-    projectLink.href = projectData.link;
-    projectLink.textContent = projectData.link;
+    projectData.grades.forEach(grade => {
+        const tagWrapper = document.querySelector('.project-tags');
+        const tagElement = document.createElement('span');
+        tagElement.textContent = grade.title;
+        tagWrapper.appendChild(tagElement);
+
+        // add class class="tag-style"
+        tagElement.classList.add('tag-style');
+    });
 }
