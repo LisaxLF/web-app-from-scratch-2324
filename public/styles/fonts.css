@@ -9,6 +9,7 @@
     /* colors used */
     --color-primary-bg: #1A1A1A;
     --color-secondary-text-white: #E9E9E9;
+    --color-secondary-text-blue: #5E8CA0;
 
     /* drop shadow used */
     --shadow: 4px 4px 8px rgba(0, 0, 0, 0.31);

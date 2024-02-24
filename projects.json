@@ -1,51 +1,201 @@
  [{
-     "title": "Blok Tech",
-     "type": "Project",
-     "description": "Project Tech is a hands-on learning experience where I'll learned about web things like how websites are built, creative coding, and managing projects efficiently. I picked up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
-     "mockup": "./images/mockups/rocketFinderz.png",
-     "mockup": "./images/mockups/rocketFinderz.png",
-     "grades": [{
-             "title": "Project",
-             "grade": 7.5
-         },
-         {
-             "title": "Backend development",
-             "grade": 7.1
-         },
-         {
-             "title": "Frontend development",
-             "grade": 7.4
-         }
-     ],
-     "linkGithub": "https://example.com/subject1",
-     "colors": ["#BCE2F3", "#EECE79"]
- }, {
-     "title": "information design",
-     "type": "Minor",
-     "description": "Minor Information Design offers a focused program with three essential components: In Data Visualization, students learn to create clear and engaging visualizations using charts, graphs, and maps. The Tech Track provides skills in web technologies to present data effectively online. Through the Integration Project, students collaborate on real-world projects, combining technical expertise and design principles to deliver client solutions.",
-     "grades": [{
-             "title": "Datavisualisation",
-             "grade": 7
-         },
-         {
-             "title": "Tech Track",
-             "grade": 8.3
-         },
-         {
-             "title": "Project information",
-             "grade": 8
-         }
-     ],
-     "linkGithub": "https://example.com/subject1",
-     "colors": ["#B74F6B", "#89FFFF"]
- }, {
-     "title": "Web design & development",
-     "type": "Minor",
-     "description": "The minor Web Design and Development is a hands-on learning experience where I'll learn about web things like how websites are built, creative coding, and managing projects efficiently. I'll pick up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
-     "grades": [{
-         "title": "Project Tech",
-         "grade": 0
-     }],
-     "linkGithub": "https://example.com/subject1",
-     "colors": ["#FFFFFF", "#FFFFFF"]
- }]
+         "title": "Blok Tech",
+         "type": "Project",
+         "description": "Project Tech is a hands-on learning experience where I'll learned about web things like how websites are built, creative coding, and managing projects efficiently. I picked up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
+         "mockup": "./images/mockups/rocketFinderz.png",
+         "resources": [
+            {
+                 "name": "EJS",
+                 "icon": "./images/skills/ejs.png"
+             },
+             {
+                 "name": "Node.js",
+                 "icon": "./images/skills/nodejs.png"
+             },
+             {
+                 "name": "Express",
+                 "icon": "./images/skills/express.png"
+             },
+             {
+                 "name": "MongoDB",
+                 "icon": "./images/skills/mongodb.png"
+             },
+             {
+                 "name": "Figma",
+                 "icon": "./images/skills/Figma.png"
+             },
+             {
+                 "name": "html",
+                 "icon": "./images/skills/html.png"
+             },
+             {
+                 "name": "javascript",
+                 "icon": "./images/skills/javascript.png"
+             },
+             {
+                 "name": "css",
+                 "icon": "./images/skills/css.png"
+             },
+             {
+                 "name": "github",
+                 "icon": "./images/skills/github.png"
+             },
+             {
+                 "name": "sass",
+                 "icon": "./images/skills/sass.png"
+             }
+         ],
+         "courses": [
+            {
+                 "title": "Project",
+                 "individual": [{
+                         "header": "Starting the journey",
+                         "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i came up with the 3 ideas, i had to choose one of them to work out. I chose the idea of a gaming application where you can find people to play with. I chose this idea because i like to game in my spare time and i know that there are a lot of people who are looking for people to play with."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i chose the idea, i started building the application. I started with the design of the application. I made a few mockups of the application and i chose the one that i liked the most. After that i started building the application with the technologies that i learned in the previous courses."
+                     },
+                     {
+                         "header": "final concept",
+                         "paragraph": "After building the application, i had to make sure that the application was working properly. I tested the application and made sure that everything was working properly. After that i had to make sure that the application was responsive and that it looked good on every device. After that i was done with the application."
+                     },
+                     {
+                         "header": "Jobstories",
+                         "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
+                     }
+                 ],
+                 "team": [{
+                         "header": "Ideas & Concept",
+                         "paragraph": "PawfectMatch started as a web app that matches people with adoptable pets. With a team of five, we developed this basic feature into a working web app. We brainstormed and decided which features were needed to make a cool web app."
+                     },
+                     {
+                         "header": "Brainstorming",
+                         "paragraph": "For brainstorming, we thought of different features to add to our web app. We organized these features into a word web to keep things clear. Each of us chose the feature that suited us best. Eventually, we selected five features from this word web to develop in our web app."
+                     },
+                     {
+                         "header": "Features",
+                         "paragraph": "Finally, we assigned one feature to each team member:\n\nLisa handles login.\nLuca takes care of registration.\nStephan manages commenting.\nJoppe deals with uploading.\nThimo focuses on liking."
+                     },
+                     {
+                         "header": "Design & styling",
+                         "paragraph": "I developed a small branding guideline for the team to ensure a cohesive look. Although the application we're working on already had chosen colors, I made some adjustments and iterations to align them with our branding style. Each team member is free to choose the look and feel within their own feature, but they must adhere to the branding style. Through the already chosen colors and playful fonts, I tried to create a pleasant feeling for visitors to the website. Additionally, the photos of the animals contribute to making the site even more enjoyable. For the buttons, I decided to keep them simple yet clear. The buttons in the header remain consistent, and the text 'PawfectMatch' leads to the homepage."
+                     }
+                 ],
+                 "goals": ["You can design and develop a dynamic matching app",
+                     "You can use version control using Git and GitHub",
+                     "You can navigate the terminal",
+                     "You can set-up your own development env",
+                     "You can write documentation"
+                 ]
+             },
+             {
+                 "title": "Backend development",
+                 "individual": [{
+                         "header": "Setting Up a Server",
+                         "paragraph": "For the backend, it was essential to have a server running to handle tasks like showing and sending data. In the first week, I learned to set up a basic server and then moved on to setting up basic routing for my application. We continued to enhance our server by ensuring it handled routes and served static files.\n\nThe server was required to accomplish at least three things:\n\nBasic routing: I created different routes (e.g., /about, /login) essential for the matching application.\nError handling: It responded with a 404 Not Found if users visited a route that didn't exist.\nServing static files: It served CSS, as well as media files like images, videos, or audio files.\n\nNext, I focused on building the interface and components for the matching application. With the server already up and running, it was time to send dynamic HTML to the client using a templating engine."
+                     },
+                     {
+                         "header": "Templating Engine",
+                         "paragraph": "After setting up my server, I had to send dynamic HTML to the client-side using a templating engine. I was in search of a good and clear template. Two of the template engines caught my eye, they were called PUG and EJS. Overall, they were really understandable and readable. After searching the internet for guides and tutorials, I tested out EJS, and it was going great so far.\n\nFor the template engine, I picked EJS because the installation was a bit easier than the rest like PUG and Handlebars. Another reason I went with EJS was that our teacher knew more about EJS than Handlebars or PUG.\n\nI started by creating views and rendering pages using the templating engine, ensuring each route had its own HTML file. Then, I rendered dynamic data using the templating engine, injecting data into the views dynamically."
+                     },
+                     {
+                         "header": "Setting Up a Database",
+                         "paragraph": "Moving forward, I focused on receiving data from users to facilitate the feature of helping players connect easily based on shared interests and skills. Users could customize their profiles, selecting preferred skill levels and playstyles. This required implementing forms and handling user input on the server-side.\n\nI added form inputs on the settings page for users to save their preferences. The first section I created was for their displayed card, allowing them to modify their settings. The next section included preferences such as preferred skill levels, such as 3s and 2s ranks, and the playstyle they were looking for in a teammate."
+                     },
+                     {
+                         "header": "Working on My Application",
+                         "paragraph": "Now, users have the capability to submit their new usernames, bios, etc., and update these details. These updated details will be reflected as new placeholders on the forms and on their displayed cards. Additionally, users can modify their preferred playstyle and ranks to find their preferred teammates."
+                     }
+                 ],
+                 "team": [{
+                         "header": "My Features",
+                         "paragraph": "For the team assignment, we were tasked with developing a feature to create a functional matching application. Interested in learning something new, I took it upon myself to select the login feature and begin working on it. This feature was vital for establishing user accounts and providing a secure platform for interactions within the application. My main focus in this project was primarily the login functionality. Login is crucial because each user needs their own page where they can manage personal activities, such as posting their pets, liking, and saving found pets. During login, it's important to create a session so that the user doesn't have to log in again for each route on our website. Additionally, having some security measures in place is essential to prevent hackers from easily accessing an account. I took these aspects into account when building the login function.\n\nI also tried to incorporate my individual part of the Tech project, which was updating profile data so that changes are reflected in the database and can be reused. As a user, you might want to change your name, email, or password, and this can be easily managed within the profile page.\n\nLastly, I implemented a logout function so that when the user is finished and wants to log out, the current session ends, and the user would need to log in again to access their page."
+                     },
+                     {
+                         "header": "My Extra Research",
+                         "paragraph": "For extra points, I conducted research on a specific topic from a provided list. I chose to explore bcrypt, which proved to be highly relevant given my focus on building a login page. This research was particularly beneficial as it provided insights into password hashing and enhanced the security of our application."
+                     }
+                 ],
+                 "goals": [
+                     "You can build web apps with Node and use packages from NPM",
+                     "You can render data server-side with a templating engine",
+                     "You can write documentation that other developers understand",
+                     "You can communicate over HTTP and understand the client / server flow",
+                     "You can store data in a database and update that data",
+                     "You can explain your code and the cohesion (flow) of your application"
+                 ]
+             },
+             {
+                 "title": "Frontend development",
+                 "individual": [{
+                         "header": "Progessive Enchantment",
+                         "paragraph": "For the front-end development course, I started working on the progressive enhancement aspect, which was a key grading topic.\n\nFor my application, I decided to implement Progressive Enhancement (PE) on the forms within the user settings. To facilitate finding new matches, I created a page with user settings containing forms where users can adjust their preferences.\n\n**HTML, CSS, and JS**\n\nWhenever the user selects more than two checkboxes, the browser triggers an alert to remind the user to only pick two options. Additionally, the text color changes to red briefly to draw attention to this message.\n\n**HTML, CSS**\n\nIn the absence of JavaScript, the settings still function, but some visual enhancements are lost. Unfortunately, without JavaScript, there's no mechanism to prevent users from selecting more than two options. However, the first two options selected will still be sent to the database, allowing for new matches to be generated.\n\n**HTML**\n\nDespite the absence of styling, users can still discern which form corresponds to which element.\nAdditionally, I added a custom footer to enhance the overall user experience."
+                     },
+                     {
+                         "header": "API",
+                         "paragraph": "I incorporated two APIs into my project to enhance its functionality and user experience.\n\nThe first API I attempted to use was the Rocket League tracker API, which would have allowed me to retrieve real player data, such as ranks and stats, for display on user profile cards. However, due to limitations on free access, I had to find an alternative API that aligned with my project theme. Eventually, I discovered the random Useless Facts API, which provides random fun facts. I integrated this API into the user settings feature so that every time a user updates their preferences, they receive a new random fun fact.\n\nThe second API I incorporated was the Vibration API from Mozilla Docs. This API allows web apps to access vibration hardware on compatible devices, providing physical feedback to users. I implemented this API to trigger a short vibration whenever a user likes another gamer. Although I initially intended to use it for new match notifications as well, time constraints limited its implementation.\n\nThe Fetch API, which I used for interacting with the Useless Facts API, is a powerful web API for making network requests in JavaScript. It simplifies fetching resources from servers or API endpoints and handling responses, contributing to the dynamic functionality of my project."
+                     }
+                 ],
+                 "team": [{
+                         "header": "Application",
+                         "paragraph": "For the team assignment, we focused on enhancing the performance and speed of our application. To achieve this, I took the initiative to implement three key optimizations:\n\n1. Implementing Gzip Compression: I recognized the importance of reducing file sizes to improve page loading times. Therefore, I integrated Gzip compression, a widely-used algorithm that compresses web pages and files before transmission. This significantly minimized data transfer and accelerated page loading, enhancing the overall user experience.\n\n2. Lazy Loading: Recognizing the impact of media content on page load times, I implemented lazy loading. This technique defers the loading of non-essential resources, such as images and videos, until they are needed. By loading these resources dynamically as users interact with the page, we were able to achieve faster initial page loads and optimize bandwidth usage.\n\n3. Image Optimization with Sharp: Understanding the importance of image optimization for performance, I leveraged Sharp, a powerful node module, to process and optimize images. By utilizing Sharp alongside the Multer module for image uploads, we were able to transform and resize images to meet specific requirements. This included converting images to the Webp format for optimal web delivery and resizing them to a uniform size. These optimizations ensured that images were delivered efficiently, contributing to faster page loading and an enhanced user experience overall.\n\nBy implementing these optimizations, we successfully improved the performance and speed of our application, ultimately providing users with a smoother and more responsive browsing experience."
+                     },
+                     {
+                         "header": "Research",
+                         "paragraph": "For the research aspect, our team delved into various topics related to our project. Each of us explored different areas and documented our findings extensively on our project wiki. We went deep into understanding how we could enhance our application and make it perform better. This collaborative effort helped us gain valuable insights into what strategies to adopt and how to implement them effectively. Our wiki became a comprehensive resource, serving as a roadmap for our project's development. By sharing our research findings, we ensured that everyone on the team was on the same page and had a clear understanding of the tasks at hand. This thorough research process not only benefited our project but also contributed to our collective learning and growth as a team."
+                     },
+                     {
+                         "header": "Quality",
+                         "paragraph": "In terms of how our front-end works together, we made sure that all parts of our website fit well and functioned smoothly. This meant organizing our HTML, CSS, and JavaScript in a way that made sense and didn't cause any problems. We wanted everything to feel consistent and easy to use for anyone visiting our site.\n\nWhen it comes to getting our website ready for the real world, we focused on making sure our code was solid and dependable. We spent time testing everything thoroughly to catch any issues and fix them. Our goal was to have a website that worked well and was reliable for anyone who wanted to use it."
+                     }
+                 ],
+                 "goals": [
+                     "You improve your knowledge about core (ES6+) JavaScript concepts",
+                     "You know what progressive enhancement means (and understand how fallbacks work)",
+                     "You can build an enhanced frontend component with client-side JavaScript",
+                     "You understand how events work and can manipulate the DOM",
+                     "You understand the use of API's and can implement web and third-party API's",
+                     "You can optimize a front-end application for production use",
+                     "You are able to read documentation and research technical topics"
+                 ]
+             }
+         ],
+         "linkGithub": "https://example.com/subject1",
+         "colors": ["#BCE2F3", "#EECE79"]
+     },
+     {
+         "title": "information design",
+         "type": "Minor",
+         "description": "Minor Information Design emphasizes three key aspects: Data Visualization, Tech Track, and Integration Project. Through these components, students develop skills in creating compelling visuals, mastering web technologies, and collaborating on real-world projects, offering a well-rounded educational experience.",
+         "courses": [{
+                 "title": "Datavisualisation",
+                 "grade": 7
+             },
+             {
+                 "title": "Tech Track",
+                 "grade": 8.3
+             },
+             {
+                 "title": "Project information",
+                 "grade": 8
+             }
+         ],
+         "linkGithub": "https://example.com/subject1",
+         "colors": ["#B74F6B", "#89FFFF"]
+     }, {
+         "title": "Web design & development",
+         "type": "Minor",
+         "description": "The minor Web Design and Development is a hands-on learning experience where I'll learn about web things like how websites are built, creative coding, and managing projects efficiently. I'll pick up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
+         "courses": [{
+             "title": "Project Tech",
+             "grade": 0
+         }],
+         "linkGithub": "https://example.com/subject1",
+         "colors": ["#FFFFFF", "#FFFFFF"]
+     }
+ ]

@@ -16,13 +16,8 @@ async function getProjectData(projectTitle) {
     const projectsData = await fetch('https://raw.githubusercontent.com/LisaxLF/web-app-from-scratch-2324/main/projects.json');
     const projects = await projectsData.json();
 
-    // console the result
-    console.log('project:', projects);
-
     // Get the project data based on the projectTitle
     const projectData = projects.find(project => project.title === projectTitle);
-
-    console.log('projectData:', projectData);
 
     return projectData;
 
@@ -35,15 +30,20 @@ async function renderProjectData(projectData) {
     const projectType = document.querySelector('.project-type');
     const projectDescription = document.querySelector('.project-description');
     const projectTags = document.querySelector('.project-tags');
-    const projectLink = document.querySelector('.project-link');
+    const projectLink = document.querySelector('.project-github');
+    const projectResources = document.querySelector('.project-resources');
+
 
     projectTitle.textContent = projectData.title;
     projectType.textContent = projectData.type;
     projectDescription.textContent = projectData.description;
-
+    projectLink.textContent = projectData.linkGithub;
 
     // render each tag
     RenderTags(projectData);
+
+    // render each resource
+    RenderResources(projectData);
 
     // render the image
     const projectImage = document.querySelector('.project-mockup');
@@ -55,6 +55,7 @@ async function showProject() {
     const fullscreenProject = document.querySelector('.fullscreen-project');
 
     fullscreenProject.classList.add('active');
+
 }
 
 // Hide the project with animation
@@ -79,5 +80,28 @@ function RenderTags(projectData) {
 
         // add class class="tag-style"
         tagElement.classList.add('tag-style');
+    });
+}
+
+function RenderResources (projectData) {
+    // clear the resources
+    const resourceWrapper = document.querySelector('.project-resources');
+    resourceWrapper.innerHTML = '';
+
+    projectData.resources.forEach(resource => {
+        // create the resource element
+        const resourceWrapper = document.querySelector('.project-resources');
+        const resourceElement = document.createElement('div');
+        const resourceimage = document.createElement('img');
+
+        // add the content
+        resourceElement.textContent = resource.name;
+        resourceimage.src = resource.icon;
+        resourceWrapper.appendChild(resourceElement);
+        resourceElement.appendChild(resourceimage);
+
+
+        // add class class="resource-style"
+        resourceElement.classList.add('resource-style');
     });
 }

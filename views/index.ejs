@@ -41,6 +41,7 @@
         </section>
         <section>
             <article>
+                <span class="sub-header">who is</span>
                 <h2>Lisa lotte Fokkinga</h2>
                 <div>
                     <span class="tag-style">Web designer</span>
@@ -76,9 +77,12 @@
         <section>
             <img src="./images/grain-texture2.jpg" alt="background image grain">
             <article>
-                <h2>
-                    My skills and gains
-                </h2>
+                <div>
+                    <span class="sub-header">what are</span>
+                    <h2>
+                        My skills and gains
+                    </h2>
+                </div>
                 <p>It's time for me to elaborate on what I bring to the table and the skills I can offer. Here's a brief
                     overview of the skills I possess for both web design and development</p>
             </article>
@@ -160,7 +164,10 @@
         </section>
         <section>
             <article>
-                <h2>My projects</h2>
+                <div>
+                    <span class="sub-header">explore</span>
+                    <h2>My work and projects</h2>
+                </div>
                 <p>Here are some of the projects I've worked on. I've included a brief description of each project and
                     what I've learned from it. Feel free to check them out and let me know what you think!</p>
             </article>
@@ -171,9 +178,6 @@
 
                 <a class="project" onclick="showFullScreen('<%= project.title %>')">
                     <div class="bg-mask">
-                        <div
-                            style="background: linear-gradient(to right, <%= project.colors[0] %>, <%= project.colors[1] %>);">
-                        </div>
                         <img src="./images/grain-texture.jpg" alt="background image grain">
                     </div>
                     <div class="text-wrapper">
@@ -182,11 +186,12 @@
                             <h3><%= project.title %></h3>
                         </div>
                         <div class="tags">
-                            <!-- for each lus for all grade title names -->
-                            <% for (const grade of project.grades) { %>
-                            <span class="tag-style"><%= grade.title %></span>
+                            <!-- for each lus for all courses title names -->
+                            <% for (const course of project.courses) { %>
+                            <span class="tag-style"><%= course.title %></span>
                             <% } %>
                         </div>
+                        <p class="discription"><%= project.description %></p>
                     </div>
                 </a>
                 <% } %>
@@ -194,7 +199,7 @@
             <div class="fullscreen-project">
                 <div class="left-side">
                     <div class="project-close" onclick="closeProject()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M0.359369 21.908C-0.119167 22.3865 -0.119167 23.1624 0.35937 23.6409C0.837906 24.1195 1.61377 24.1195 2.0923 23.6409L12.0001 13.7331L21.908 23.6409C22.3865 24.1194 23.1624 24.1194 23.6409 23.6409C24.1194 23.1624 24.1194 22.3865 23.6409 21.908L13.7331 12.0001L23.6414 2.09184C24.1199 1.6133 24.1199 0.837439 23.6414 0.358902C23.1628 -0.119634 22.387 -0.119634 21.9084 0.358902L12.0001 10.2672L2.09183 0.358902C1.6133 -0.119634 0.837438 -0.119634 0.358902 0.358903C-0.119634 0.837439 -0.119634 1.6133 0.358902 2.09184L10.2672 12.0001L0.359369 21.908Z"
                                 fill="white" />
@@ -206,20 +211,21 @@
                         <div class="project-tags">
                             <!-- Hier word dynamische tags geleverd -->
                         </div>
-                        <p class="project-description"></p>
-                        <a class="project-link" href="">View project
-                            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g id="&#62;&#62;">
-                                    <path id="Vector"
-                                        d="M7.69385 8.57692L11.3185 5.98077L9.32726 4.59615C9.05762 4.41667 8.77761 4.21795 8.48722 4C8.20721 3.76923 7.94275 3.57051 7.69385 3.40385V0L14.352 4.75V7.23077L7.69385 12V8.57692Z"
-                                        fill="#1A1A1A" />
-                                    <path id="Vector_2"
-                                        d="M0 8.57692L3.62463 5.98077L1.63342 4.59615C1.36377 4.41667 1.08376 4.21795 0.793374 4C0.513359 3.76923 0.248902 3.57051 0 3.40385V0L6.65812 4.75V7.23077L0 12V8.57692Z"
-                                        fill="#1A1A1A" />
-                                </g>
-                            </svg>
-                        </a>
+                        <div class="project-resources-wrapper">
+                            <h5>Resources</h5>
+                            <div class="project-resources">
+                                <!-- Hier word dynamische resources geleverd -->
+                            </div>
+                        </div>
+                        <div class="project-github-wrapper">
+                            <h5>Github</h5>
+                            <p class="project-github"></p>
+                        </div>
+                        <div class="project-description-wrapper">
+                            <h5>Description</h5>
+                            <p class="project-description"></p>
+                        </div>
+                        <a class="secondary-btn" href="">read more</a>
                     </div>
                 </div>
                 <div class="right-side">
