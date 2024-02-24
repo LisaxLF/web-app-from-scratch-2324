@@ -164,7 +164,7 @@ section:first-of-type {
     position: relative;
 }
 
-section:first-of-type>img {
+.overview section:first-of-type>img {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
@@ -179,7 +179,7 @@ section:first-of-type>img {
     z-index: -1;
 }
 
-section:first-of-type>div:first-of-type>div {
+.overview section:first-of-type>div:first-of-type>div {
     position: relative;
     display: flex;
     align-items: center;
@@ -187,7 +187,7 @@ section:first-of-type>div:first-of-type>div {
 }
 
 /* shape  */
-section:first-of-type>div:first-of-type {
+.overview section:first-of-type>div:first-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -756,7 +756,7 @@ h4 {
 .project-description-wrapper {
     display: flex;
     flex-direction: column;
-    gap: .2em;
+    gap: .5em;
     margin-bottom: 1em;
 }
 

@@ -31,6 +31,22 @@ app.get('/', async (_req, res) => {
     }
 });
 
+// Route for the project page
+app.get('/:title', async (req, res) => {
+    try {
+        const projectsData = await readFile('projects.json');
+        const projects = JSON.parse(projectsData);
+        const projectData = projects.find(project => project.title === req.params.title);
+
+        res.render('project', {
+            projectData
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error occurred while reading files.');
+    }
+});
+
 async function readFile(filename) {
     return new Promise((resolve, reject) => {
         fs.readFile(filename, 'utf8', (err, data) => {

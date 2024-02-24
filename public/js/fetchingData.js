@@ -8,6 +8,9 @@ async function showFullScreen(projectTitle) {
 
     // await show project
     await showProject();
+
+    // Send to the project page route
+    sendToProjectPage(projectTitle);
 }
 
 //  Get assigned project data
@@ -124,4 +127,10 @@ function RenderResources (projectData) {
         });
 
     });
+}
+
+// Send to the project page route
+function sendToProjectPage(projectTitle) {
+    const projectLocation = document.querySelector('#project-location');
+    projectLocation.href = `/${projectTitle}`;
 }
