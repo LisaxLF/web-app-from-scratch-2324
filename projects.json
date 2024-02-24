@@ -10,8 +10,8 @@
              },
              {
                  "name": "Node.js",
-                 "icon": "./images/skills/nodejs.png"
-             },
+                 "icon": "./images/skills/node.png"
+             }, 
              {
                  "name": "Express",
                  "icon": "./images/skills/express.png"

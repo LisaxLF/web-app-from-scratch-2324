@@ -37,7 +37,7 @@ async function renderProjectData(projectData) {
     projectTitle.textContent = projectData.title;
     projectType.textContent = projectData.type;
     projectDescription.textContent = projectData.description;
-    projectLink.textContent = projectData.linkGithub;
+        // projectLink.textContent = projectData.linkGithub;
 
     // render each tag
     RenderTags(projectData);
@@ -72,7 +72,7 @@ function RenderTags(projectData) {
     const tagWrapper = document.querySelector('.project-tags');
     tagWrapper.innerHTML = '';
 
-    projectData.grades.forEach(grade => {
+    projectData.courses.forEach(grade => {
         const tagWrapper = document.querySelector('.project-tags');
         const tagElement = document.createElement('span');
         tagElement.textContent = grade.title;
@@ -91,17 +91,37 @@ function RenderResources (projectData) {
     projectData.resources.forEach(resource => {
         // create the resource element
         const resourceWrapper = document.querySelector('.project-resources');
+
+        // content wrapper for the resource and name
+        const resourceContentWrapper = document.createElement('div');
+        resourceWrapper.appendChild(resourceContentWrapper);
+        resourceContentWrapper.classList.add('resource-content-wrapper');
+
+        // the name
+        const resourceName = document.createElement('p');
+        resourceName.textContent = resource.name;
+        resourceContentWrapper.appendChild(resourceName);
+        resourceName.classList.add("icon-name");
+        
+        // the circle
         const resourceElement = document.createElement('div');
-        const resourceimage = document.createElement('img');
-
-        // add the content
-        resourceElement.textContent = resource.name;
-        resourceimage.src = resource.icon;
-        resourceWrapper.appendChild(resourceElement);
-        resourceElement.appendChild(resourceimage);
-
-
-        // add class class="resource-style"
+        resourceContentWrapper.appendChild(resourceElement);
         resourceElement.classList.add('resource-style');
+        
+        // the image
+        const resourceimage = document.createElement('img');
+        resourceimage.src = resource.icon;
+        resourceElement.appendChild(resourceimage);
+        
+        // add the name below when hovered
+        resourceElement.addEventListener('mouseover', function() {
+            resourceName.classList.add('icon-name-active');
+        });
+
+        // remove the name below when hovered
+        resourceElement.addEventListener('mouseout', function() {
+            resourceName.classList.remove('icon-name-active');
+        });
+
     });
 }
