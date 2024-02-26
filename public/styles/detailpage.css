@@ -97,3 +97,33 @@
     flex-direction: column;
     gap: 1em;
 }
+
+/* Buttons */
+.topic-btns {
+    display: flex;
+    gap: 1em;
+}
+
+/* GOALS ARTICLE */
+.goals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.goals>p {
+    text-align: center;
+    width: 50%;
+}
+
+.goals-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.goal-card {
+    
+}

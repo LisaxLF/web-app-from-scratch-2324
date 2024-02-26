@@ -7,15 +7,14 @@
          "IntroductionText": "In Project Tech, you'll take your first steps toward becoming a well-rounded web developer. Imagine building a dynamic prototype for an app where people can find matching connections. The cool part is, you'll learn not just the technical stuff, but also some really helpful skills. We'll dive into the 'soft' skills, like understanding how to read instructions, working together with others, and being a good team player. On the more technical side, you'll get comfortable using important tools, like the command line and version control. This project isn't just about coding. It's like an adventure that helps you learn how to do cool things on the web. By the end, you'll not only have a cool prototype but also a bunch of skills that will help you keep growing as a web developer.",
          "IntroductionImage": "./images/mockups/IphoneImage.png",
          "mockup": "./images/mockups/rocketFinderz.png",
-         "resources": [
-            {
+         "resources": [{
                  "name": "EJS",
                  "icon": "./images/skills/ejs.png"
              },
              {
                  "name": "Node.js",
                  "icon": "./images/skills/node.png"
-             }, 
+             },
              {
                  "name": "Express",
                  "icon": "./images/skills/express.png"
@@ -49,10 +48,9 @@
                  "icon": "./images/skills/sass.png"
              }
          ],
-         "courses": [
-            {
+         "courses": [{
                  "title": "Project",
-                 "individual": [{
+                 "individual assignment": [{
                          "header": "Starting the journey",
                          "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
                      },
@@ -73,7 +71,7 @@
                          "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
                      }
                  ],
-                 "team": [{
+                 "team assignment": [{
                          "header": "Ideas & Concept",
                          "paragraph": "PawfectMatch started as a web app that matches people with adoptable pets. With a team of five, we developed this basic feature into a working web app. We brainstormed and decided which features were needed to make a cool web app."
                      },
@@ -90,11 +88,26 @@
                          "paragraph": "I developed a small branding guideline for the team to ensure a cohesive look. Although the application we're working on already had chosen colors, I made some adjustments and iterations to align them with our branding style. Each team member is free to choose the look and feel within their own feature, but they must adhere to the branding style. Through the already chosen colors and playful fonts, I tried to create a pleasant feeling for visitors to the website. Additionally, the photos of the animals contribute to making the site even more enjoyable. For the buttons, I decided to keep them simple yet clear. The buttons in the header remain consistent, and the text 'PawfectMatch' leads to the homepage."
                      }
                  ],
-                 "goals": ["You can design and develop a dynamic matching app",
-                     "You can use version control using Git and GitHub",
-                     "You can navigate the terminal",
-                     "You can set-up your own development env",
-                     "You can write documentation"
+                 "goals": [{
+                         "goal": "You can design and develop a dynamic matching app",
+                         "goal-icon": "./images/icons/designing.png"
+                     },
+                     {
+                         "goal": "You can use version control using Git and GitHub",
+                         "goal-icon": "./images/icons/github.png"
+                     },
+                     {
+                         "goal": "You can navigate the terminal",
+                         "goal-icon": "./images/icons/editor.png"
+                     },
+                     {
+                         "goal": "You can set-up your own development env",
+                         "goal-icon": "./images/icons/code.png"
+                     },
+                     {
+                         "goal": "You can write documentation",
+                         "goal-icon": "./images/icons/documentation.png"
+                     }
                  ]
              },
              {
