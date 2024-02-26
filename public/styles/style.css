@@ -61,12 +61,14 @@ h4 {
     font-size: 1.4rem;
     color: black;
     -webkit-text-fill-color: transparent;
+    background: transparent;
     /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #92D7E0;
     font-family: var(--font-family-headers);
     font-weight: bolder;
     text-transform: uppercase;
+    letter-spacing: 3.3px;
 }
 
 li,
@@ -100,6 +102,7 @@ span {
 header {
     color: var(--color-secondary-text-white);
     padding: .6em 2em;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,7 +167,7 @@ section {
     flex-direction: column;
 }
 
-.landing-page section:first-of-type>img {
+.landing-page section:first-of-type>img, .grain {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
@@ -273,19 +276,19 @@ section {
 
 /* SECTION 2 - ABOUT ME */
 /* grid for sections */
-section:nth-of-type(2) {
+.landing-page section:nth-of-type(2) {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-section:nth-of-type(2)>article:first-of-type>div:first-of-type {
+.landing-page section:nth-of-type(2)>article:first-of-type>div:first-of-type {
     display: flex;
     flex-direction: row;
     gap: var(--gap-tags);
 }
 
-section:nth-of-type(2)>article:first-of-type {
+.landing-page section:nth-of-type(2)>article:first-of-type {
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -293,7 +296,7 @@ section:nth-of-type(2)>article:first-of-type {
     z-index: 1;
 }
 
-section:nth-of-type(2)>div:last-of-type {
+.landing-page section:nth-of-type(2)>div:last-of-type {
     display: flex;
     grid-column: 4 / span 3;
     height: 100%;
@@ -323,7 +326,7 @@ section:nth-of-type(2) > article:first-of-type  > h2::after {
 /* -webkit-text-fill-color: transparent; Vultekst transparant maken */
 /* } */
 
-section:nth-of-type(2)>div:first-of-type::after {
+.landing-page section:nth-of-type(2)>div:first-of-type::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -333,7 +336,7 @@ section:nth-of-type(2)>div:first-of-type::after {
 }
 
 /* img foto lisa */
-section:nth-of-type(2)>div:last-of-type img {
+.landing-page section:nth-of-type(2)>div:last-of-type img {
     width: 100%;
     height: 80%;
     object-fit: contain;
@@ -344,7 +347,7 @@ section:nth-of-type(2)>div:last-of-type img {
 }
 
 /* buttons & links */
-section:nth-of-type(2)>article:first-of-type div:last-of-type {
+.landing-page section:nth-of-type(2)>article:first-of-type div:last-of-type {
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -352,14 +355,14 @@ section:nth-of-type(2)>article:first-of-type div:last-of-type {
 
 }
 
-section:nth-of-type(2)>article:first-of-type a {
+.landing-page section:nth-of-type(2)>article:first-of-type a {
     cursor: pointer;
     font-size: 1em;
     text-transform: uppercase;
     margin-top: 1em;
 }
 
-section:nth-of-type(2)>article:first-of-type a:last-of-type {
+.landing-page section:nth-of-type(2)>article:first-of-type a:last-of-type {
     background-color: var(--color-secondary-text-white);
     color: var(--color-primary-bg);
     display: flex;
@@ -368,7 +371,7 @@ section:nth-of-type(2)>article:first-of-type a:last-of-type {
     padding: 0.2em 1em;
 }
 
-section:nth-of-type(2)>article:first-of-type a:last-of-type:hover svg path#arrow {
+.landing-page section:nth-of-type(2)>article:first-of-type a:last-of-type:hover svg path#arrow {
     animation: moveUpDown 1s infinite alternate;
 }
 
@@ -1236,12 +1239,17 @@ h4 {
     }
 
     h3 {
-        font-size: 2.4rem;
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    h5 {
+        font-size: 1.2rem;
     }
 
     p {
-        font-size: 1.3rem;
-        line-height: 25px;
+        font-size: 1rem;
+        line-height: 22px;
         font-weight: 200;
     }
 

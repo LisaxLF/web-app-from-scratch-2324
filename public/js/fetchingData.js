@@ -39,7 +39,7 @@ async function renderProjectData(projectData) {
     projectTitle.textContent = projectData.title;
     projectType.textContent = projectData.type;
     projectDescription.textContent = projectData.description;
-        // projectLink.textContent = projectData.linkGithub;
+    // projectLink.textContent = projectData.linkGithub;
 
     // render each tag
     RenderTags(projectData);
@@ -52,7 +52,7 @@ async function renderProjectData(projectData) {
     projectImage.src = projectData.mockup;
 }
 
-renderProjectData();	// Render the project data
+
 
 // Show the project with animation
 async function showProject() {
@@ -87,16 +87,14 @@ function RenderTags(projectData) {
     });
 }
 
-function RenderResources (projectData) {
+function RenderResources(projectData) {
     // clear the resources
     const resourceWrapper = document.querySelector('.project-resources');
     resourceWrapper.innerHTML = '';
 
     projectData.resources.forEach(resource => {
-        // create the resource element
-        const resourceWrapper = document.querySelector('.project-resources');
 
-        // content wrapper for the resource and name
+        // create the resource element
         const resourceContentWrapper = document.createElement('div');
         resourceWrapper.appendChild(resourceContentWrapper);
         resourceContentWrapper.classList.add('resource-content-wrapper');
@@ -106,32 +104,28 @@ function RenderResources (projectData) {
         resourceName.textContent = resource.name;
         resourceContentWrapper.appendChild(resourceName);
         resourceName.classList.add("icon-name");
-        
+
         // the circle
         const resourceElement = document.createElement('div');
         resourceContentWrapper.appendChild(resourceElement);
         resourceElement.classList.add('resource-style');
-        
+
         // the image
-        const resourceimage = document.createElement('img');
-        resourceimage.src = resource.icon;
-        resourceElement.appendChild(resourceimage);
-        
+        const resourceImage = document.createElement('img');
+        resourceImage.src = resource.icon;
+        resourceElement.appendChild(resourceImage);
+
+        // events
+
         // add the name below when hovered
-        resourceElement.addEventListener('mouseover', function() {
+        resourceElement.addEventListener('mouseover', function () {
             resourceName.classList.add('icon-name-active');
         });
 
         // remove the name below when hovered
-        resourceElement.addEventListener('mouseout', function() {
+        resourceElement.addEventListener('mouseout', function () {
             resourceName.classList.remove('icon-name-active');
         });
-
     });
 }
 
-// Send to the project page route
-function sendToProjectPage(projectTitle) {
-    const projectLocation = document.querySelector('#project-location');
-    projectLocation.href = `/${projectTitle}`;
-}
