@@ -22,15 +22,41 @@
                     <span class="tag-style"><%= course.title %></span>
                     <% } %>
                 </div>
-                <p class="discription"><%= projectData.description %></p>
+                <div class="project-resources-wrapper">
+                    <h5>Resources</h5>
+                    <div class="project-resources">
+                        <!-- Hier word dynamische resources geleverd -->
+                    </div>
+                </div>
+                <div class="project-description-wrapper">
+                    <h5>Description</h5>
+                    <p class="project-description"><%= projectData.description %></p>
+                </div>
             </div>
             </div>
-            <div class="right-side">
+            <div class="detail-page-image-wrapper">
                 <!-- image src data -->
-                <img class="project-image" src="<%  %>" alt="project image">
+                <img class="project-image" src="<%= projectData.mockup  %>" alt="project image">
             </div>
         </section>
+        <section class="detail-page-introduction">
+            <div class="detail-page-content-wrapper">
+                <div class="title">
+                    <h4><%= projectData.type %></h4>
+                    <h3><%= projectData.title %></h3>
+                </div>
+                <p class="project-introduction"><%= projectData.introduction %></p>
+            </div>
+            <div class="detail-page-introduction-image">
+                <img src="<%= projectData.introductionImage %>" alt="introduction image">
+                <svg>
+
+                </svg>
+            </div>
+        </section>
+
     </main>
 </body>
+<script src="./js/fetchingData.js"></script>
 
 </html>

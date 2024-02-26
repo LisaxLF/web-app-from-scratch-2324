@@ -23,7 +23,6 @@ async function getProjectData(projectTitle) {
     const projectData = projects.find(project => project.title === projectTitle);
 
     return projectData;
-
 }
 
 // Render the project data
@@ -52,6 +51,8 @@ async function renderProjectData(projectData) {
     const projectImage = document.querySelector('.project-mockup');
     projectImage.src = projectData.mockup;
 }
+
+renderProjectData();	// Render the project data
 
 // Show the project with animation
 async function showProject() {

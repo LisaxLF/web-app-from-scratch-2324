@@ -1,5 +1,26 @@
-.oveview section {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+.detail-page > section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1em;
+    align-items: center;
+    padding-top: 5em;
 }
+
+.detail-page > .detail-page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.detail-page > .detail-page-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-page > .detail-page-image-wrapper .project-image {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
