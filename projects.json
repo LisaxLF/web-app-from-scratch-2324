@@ -313,6 +313,7 @@
             {
             "title": "Data Visualization",
             "individualGrade": "7",
+            "linkGithubIndividual": "Not relevant",
             "individualAssignment": "individual Assigment",
             "individualDescription": "In our Information Design minor, we began with a six-week focus on data visualization. Our task was to create three cohesive digital data visualizations using both the survey dataset and an external dataset.For this assignment, each visualization required a clear title and an explanation of its significance. We used various variables to highlight different aspects of the data and diverse chart types to effectively represent the information. At least one visualization had to incorporate multiple variables (a minimum of three tofour). Additionally, integrating at least one external dataset was essential to enhance our analysis.",
             "individualStory": [
@@ -373,7 +374,7 @@
                 "individualGrade": "8.3",
                 "linkGithubIndividual": "https://github.com/LisaxLF/Tech-Track-23-24",
                 "individualAssignment": "individual Assigment",
-                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualDescription": "After completing the data visualization course, we transitioned into a six-week focus on our chosen track. Mine was the Tech Track. During this period, the emphasis was on interactive data visualization, with dedicated attention to refining these skills over the course of six weeks.",
                 "individualStory": [
                     {
                       "header": "the first week",
@@ -427,8 +428,8 @@
                 "title": "Project Information",
                 "teamGrade": "8",
                 "linkGithubTeam": "https://github.com/LisaxLF/Project-Colombia",
-                "teamAssignment": "individual Assigment",
-                "teamDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "teamAssignment": "team Assigment",
+                "teamDescription": "The last course of the minor was the project, where we worked as teams together full-time for five weeks on interactive data visualizations or infographics for clients. This collaborative effort brought together students from different tracks, allowing them to apply what they had learned. \n During the project, teams had frequent interactions with organizations and companies holding data and seeking ways to make it usable and accessible. At the beginning of the project, project partners presented their design assignments, and teams were able to indicate their preferences for project partners.",
                 "teamStory": [
                     {
                       "header": "the clients",

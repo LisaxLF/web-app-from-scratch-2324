@@ -224,7 +224,7 @@ function RenderGoals(courseData) {
 }
 
 function RenderStory(courseData) {
-
+    // 
     const topicStoryStructure = `
     <div class="topic-story-individual">
         <div class="topic-content-wrapper">
