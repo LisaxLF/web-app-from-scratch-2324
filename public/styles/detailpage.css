@@ -47,7 +47,6 @@
 .detail-page .detail-page-overview .detail-page-image-wrapper>img {
     position: absolute;
     bottom: 0;
-    right: 0;
     width: 50%;
     object-fit: cover;
     object-position: center;
@@ -78,13 +77,13 @@
 
 .detail-page-introduction-wrapper img {
     z-index: 10;
+    width: 80%;
 }
 
 
 .detail-page-introduction-wrapper svg {
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 300px;
 }
 
 .detail-page .grain {
@@ -104,7 +103,58 @@
     gap: 1em;
 }
 
+.secondary-btn {
+    font-family: 'orbitron', sans-serif;
+    font-size: .7em;
+    text-transform: uppercase;
+    padding: 5px 0;
+    border-bottom: 2px solid var(--color-secondary-text-blue);
+    color: white;
+}
+
+
+.detail-page-subjects {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.detail-page-subjects .topics {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-page-subjects .topics .title {
+    width: 60%;
+}
+
 /* GOALS ARTICLE */
+/* radio button */
+input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #5E8CA0;
+    color: white;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* input en label hover */
+input[type="radio"]:hover+label {
+    border-left: #5E8CA0 2px solid;
+    border-right: #5E8CA0 2px solid;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease;
+}
+
 .goals {
     display: flex;
     align-items: center;
@@ -125,5 +175,58 @@
 }
 
 .goal-card {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 190px;
+    box-shadow: var(--shadow);
+}
+
+.goal-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.goal-card-image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal-card-image-wrapper img {
+    height: 45px;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p.goal-card-description {
+    height: 55px;
+}
+
+.goals .goals-text {
+    margin-bottom: 2em;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    gap: 0.5em;
+}
+
+.goal-card-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

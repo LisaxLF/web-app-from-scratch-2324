@@ -55,7 +55,6 @@ async function readFile(filename) {
                 reject(err);
             } else {
                 resolve(data);
-                console.log('Data:', data);
             }
         });
     });

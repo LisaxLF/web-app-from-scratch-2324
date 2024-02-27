@@ -52,8 +52,6 @@ async function renderProjectData(projectData) {
     projectImage.src = projectData.mockup;
 }
 
-
-
 // Show the project with animation
 async function showProject() {
     const fullscreenProject = document.querySelector('.fullscreen-project');
@@ -127,5 +125,12 @@ function RenderResources(projectData) {
             resourceName.classList.remove('icon-name-active');
         });
     });
+}
+
+// Send to the project page route
+function sendToProjectPage(projectTitle) {
+    const projectLink = document.querySelector('#project-location');
+    // Send to the project page route
+    projectLink.href = `/${projectTitle}`;
 }
 

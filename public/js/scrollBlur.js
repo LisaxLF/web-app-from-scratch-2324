@@ -21,7 +21,6 @@ async function fetchProjectData() {
         if (!projectData) {
             throw new Error(`Project with title '${projectTitle}' not found.`);
         }
-
         return projectData;
     } catch (error) {
         console.error('Error fetching project data:', error);
@@ -79,29 +78,82 @@ function RenderResources(projectData) {
     }
 }
 
-showResources();
-
-// Show goals
 async function showGoals() {
     const projectData = await fetchProjectData();
 
-    // Render the project data
-    RenderGoals(projectData);
+    // Get the button for the subject
+    const courseData = await getButton(projectData);
+
+    // Render the project goals
+    RenderGoals(courseData);
 }
 
-function RenderGoals(projectData) {
-    // Check if projectData and projectData.goals are defined
-    if (!projectData || !projectData.goals) {
-        console.error('Invalid project data or missing goals.');
+async function getButton(projectData) { 
+    return new Promise((resolve) => {
+        // get the radio buttons
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        console.log(radioButtons);
+
+        // Check which radio button is checked
+        radioButtons.forEach(radio => {
+            if (radio.checked) {
+                const radioValue = radio.value;
+                console.log(radioValue);
+
+                // Find the data for the radio value
+                const courseData = FindDataforRadio(projectData, radioValue);
+                resolve(courseData);
+            }
+        });
+
+        // Add event listener to the radio buttons
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', async function () {
+                if (radio.checked) {
+                    const radioValue = radio.value;
+                    console.log(radioValue);
+
+                    // Find the data for the radio value
+                    const courseData = await FindDataforRadio(projectData, radioValue);
+
+                    // Render the project goals with the updated data
+                    RenderGoals(courseData);
+                }
+            });
+        });
+    });
+}
+
+async function FindDataforRadio(projectData, radioValue) {
+    // Check if projectData has the courses property
+    if (projectData.hasOwnProperty('courses')) {
+        // Access the courses property
+        const courses = projectData.courses;
+
+        // Iterate over each course
+        for (const course of courses) {
+            // Check if the title matches the radioValue
+            if (course.hasOwnProperty('title') && course.title === radioValue) {
+                console.log(course);
+                return course; // Return the matching course
+            }
+        }
+
     }
 
+    console.log('Course not found');
+    return null; // Return null if no matching course is found
+}
+
+
+function RenderGoals(courseData) {
     // clear the goals
     const goalWrapper = document.querySelector('.goals-wrapper');
     goalWrapper.innerHTML = '';
 
     // Use try-catch to handle errors within forEach
     try {
-        projectData.goals.forEach(goal => {
+        courseData.goals.forEach(goal => {
             // Maak het doelkaart-element
             const goalCard = document.createElement('div');
             goalCard.classList.add('goal-card');
@@ -116,30 +168,34 @@ function RenderGoals(projectData) {
 
             // Voeg de afbeelding toe
             const image = document.createElement('img');
-            image.src = goals.goal-icon; // Gebruik de goalicon van het doel
+            image.src = goal['goal-icon']; // Gebruik de goalicon van het doel
             image.alt = 'illustration';
             imageWrapper.appendChild(image);
 
-            // Voeg de SVG toe
-            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            svg.classList.add('goal-card-svg');
-            svg.innerHTML = `
-        <g id="logo" style="mix-blend-mode:soft-light">
-            <g id="big circle">
-                <path id="side-p2" fill-rule="evenodd" clip-rule="evenodd" d="M1.17212 321.477C0.39624 312.755 0 303.924 0 295C0 175.742 70.7662 73.0132 172.597 26.5134L221.883 54.8159C118.924 86.1184 44 181.809 44 295C44 313.707 46.0465 331.936 49.9279 349.475L1.17212 321.477ZM588.53 265.362C589.502 275.11 590 284.997 590 295C590 413.13 520.566 515.042 420.284 562.152L371.49 534.132C472.708 501.783 546 406.951 546 295C546 275.066 543.676 255.676 539.285 237.084L588.53 265.362Z" fill="#ECECEC"/>
-                <path id="side-p1" fill-rule="evenodd" clip-rule="evenodd" d="M284.655 589.822C183.407 586.333 95.1179 531.822 44.6992 451.2L70.3315 407.041C111.496 489.425 196.64 546 294.999 546C300.157 546 305.279 545.844 310.36 545.538L284.655 589.822ZM306.475 0.219104C407.65 4.08932 495.767 58.9132 545.897 139.761L520.199 184.032C479.24 101.067 393.784 44 294.999 44C290.245 44 285.522 44.1321 280.834 44.3929L306.475 0.219104Z" fill="#ECECEC"/>
-            </g>
-        </g>
-    `;
+            // maak een svg aan
+            const svgIcon = document.createElement('div');
+            svgIcon.classList.add('goal-card-svg');
 
-            imageWrapper.appendChild(svg);
+            // Voeg de SVG-inhoud toe aan de innerHTML van het div-element
+            const svgContent = `                        
+            <svg width="90" height="90" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M49.7273 109.731C51.5229 109.909 53.3439 110 55.186 110C77.2959 110 96.3504 96.8835 105.032 77.9874L99.4173 68.2359C93.9245 87.8188 75.9408 102.179 54.6033 102.179C51.2334 102.179 47.9473 101.821 44.7807 101.14L49.7273 109.731ZM60.2608 0.232259C58.5898 0.0785555 56.8971 3.63553e-06 55.186 3.56136e-06C32.9392 2.59703e-06 13.7857 13.2796 5.17967 32.3645L10.3191 41.2902C16.368 22.61 33.9081 9.1018 54.6033 9.1018C58.6098 9.1018 62.4981 9.60809 66.2076 10.5602L60.2608 0.232259Z" fill="#E9E9E9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.000193829 56.9575C0.597712 75.905 10.7221 92.4427 25.729 101.914L34.083 97.0779C18.897 89.3517 8.48147 73.4766 8.48147 55.1475C8.48147 54.0855 8.51644 53.0317 8.58527 51.9873L-0.000193829 56.9575ZM110 53.1293C109.31 34.1992 99.1102 17.7029 84.0486 8.30125L75.7284 13.1178C91.021 20.8067 101.526 36.7395 101.526 55.1475C101.526 56.1346 101.496 57.1146 101.437 58.0865L110 53.1293Z" fill="#E9E9E9"/>
+            </svg>            
+                `;
+
+            // Voeg de SVG-inhoud toe aan de innerHTML van het div-element
+            svgIcon.innerHTML = svgContent;
+
+            // Voeg de svg toe aan de afbeeldingswrapper
+            imageWrapper.appendChild(svgIcon);
 
             // Voeg de afbeeldingswrapper toe aan de inhoud van de doelkaart
             goalCardContent.appendChild(imageWrapper);
 
             // Voeg de beschrijving toe aan de inhoud van de doelkaart
             const descriptionParagraph = document.createElement('p');
-            descriptionParagraph.textContent = description;
+            descriptionParagraph.textContent = goal.goal; // Beschrijving van het doel
             descriptionParagraph.classList.add('goal-card-description');
             goalCardContent.appendChild(descriptionParagraph);
 
@@ -147,10 +203,12 @@ function RenderGoals(projectData) {
             goalCard.appendChild(goalCardContent);
 
             // Voeg de doelkaart toe aan de goal-wrapper
-            const goalWrapper = document.querySelector('.goal-wrapper');
             goalWrapper.appendChild(goalCard);
         });
     } catch (error) {
         console.error('Error processing goals:', error);
     }
 }
+
+showGoals();
+showResources();

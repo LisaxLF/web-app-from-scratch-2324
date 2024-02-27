@@ -111,6 +111,7 @@ header {
     left: 0;
     top: 0;
     right: 0;
+    z-index: 100;
 }
 
 header img {
@@ -141,17 +142,6 @@ section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
-
-/* BUTTONS */
-.secondary-btn {
-    font-family: 'orbitron', sans-serif;
-    font-size: .7em;
-    text-transform: uppercase;
-    padding: 5px 0;
-    border-bottom: 2px solid var(--color-secondary-text-blue);
-}
-
-
 
 
 /* SECTION 1 - LANDING */
@@ -407,7 +397,7 @@ section:nth-of-type(3)>img {
     opacity: 0.7;
 }
 
-section:nth-of-type(3) {
+.landing-page section:nth-of-type(3) {
     width: 100vw;
     display: flex;
     position: relative;
@@ -419,7 +409,7 @@ section:nth-of-type(3) {
 }
 
 /* intro content */
-section:nth-of-type(3) article:first-of-type {
+.landing-page section:nth-of-type(3) article:first-of-type {
     display: flex;
     flex-direction: column;
     gap: .5em;
@@ -427,7 +417,7 @@ section:nth-of-type(3) article:first-of-type {
     margin-bottom: 3em;
 }
 
-section:nth-of-type(3) article:first-of-type h2 {
+.landing-page section:nth-of-type(3) article:first-of-type h2 {
     margin: 0;
     padding: 0;
 }
@@ -869,11 +859,11 @@ h4 {
         max-width: 300px;
     }
 
-    section:nth-of-type(3) article:first-of-type h2 {
+    .landing-page section:nth-of-type(3) article:first-of-type h2 {
         font-size: 1.8rem;
     }
 
-    section:nth-of-type(3) article:first-of-type {
+    .landing-page section:nth-of-type(3) article:first-of-type {
         width: 300px;
     }
 
@@ -996,11 +986,11 @@ h4 {
         margin-bottom: .5em;
     }
 
-    section:nth-of-type(3) article:first-of-type>h2 {
+    .landing-page section:nth-of-type(3) article:first-of-type>h2 {
         font-size: 1.8rem;
     }
 
-    section:nth-of-type(3) article:first-of-type {
+    .landing-page section:nth-of-type(3) article:first-of-type {
         width: 60%;
         margin-bottom: 1.5em;
     }
@@ -1152,15 +1142,15 @@ h4 {
 
     /* section three */
 
-    section:nth-of-type(3) article:first-of-type>h2 {
+    .landing-page section:nth-of-type(3) article:first-of-type>h2 {
         font-size: 1.8rem;
     }
 
-    section:nth-of-type(3) article:first-of-type>p {
+    .landing-page section:nth-of-type(3) article:first-of-type>p {
         text-align: center;
     }
 
-    section:nth-of-type(3) article:first-of-type {
+    .landing-page section:nth-of-type(3) article:first-of-type {
         width: 45%;
         margin-bottom: 1.5em;
         display: flex;

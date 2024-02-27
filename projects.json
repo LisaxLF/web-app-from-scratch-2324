@@ -7,7 +7,8 @@
          "IntroductionText": "In Project Tech, you'll take your first steps toward becoming a well-rounded web developer. Imagine building a dynamic prototype for an app where people can find matching connections. The cool part is, you'll learn not just the technical stuff, but also some really helpful skills. We'll dive into the 'soft' skills, like understanding how to read instructions, working together with others, and being a good team player. On the more technical side, you'll get comfortable using important tools, like the command line and version control. This project isn't just about coding. It's like an adventure that helps you learn how to do cool things on the web. By the end, you'll not only have a cool prototype but also a bunch of skills that will help you keep growing as a web developer.",
          "IntroductionImage": "./images/mockups/IphoneImage.png",
          "mockup": "./images/mockups/rocketFinderz.png",
-         "resources": [{
+         "resources": [
+            {
                  "name": "EJS",
                  "icon": "./images/skills/ejs.png"
              },
@@ -48,9 +49,14 @@
                  "icon": "./images/skills/sass.png"
              }
          ],
-         "courses": [{
+         "courses": [
+            {
                  "title": "Project",
-                 "individual assignment": [{
+                 "individual assignment": [
+                    {
+                        "introduction": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment."
+                     },
+                     {
                          "header": "Starting the journey",
                          "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
                      },
@@ -71,7 +77,8 @@
                          "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
                      }
                  ],
-                 "team assignment": [{
+                 "team assignment": [
+                    {
                          "header": "Ideas & Concept",
                          "paragraph": "PawfectMatch started as a web app that matches people with adoptable pets. With a team of five, we developed this basic feature into a working web app. We brainstormed and decided which features were needed to make a cool web app."
                      },
@@ -139,13 +146,31 @@
                      }
                  ],
                  "goals": [
-                     "You can build web apps with Node and use packages from NPM",
-                     "You can render data server-side with a templating engine",
-                     "You can write documentation that other developers understand",
-                     "You can communicate over HTTP and understand the client / server flow",
-                     "You can store data in a database and update that data",
-                     "You can explain your code and the cohesion (flow) of your application"
-                 ]
+                    {
+                        "goal": "You can build web apps with Node and use packages from NPM",
+                        "goal-icon": "./images/skills/node.png"
+                    },
+                    {
+                        "goal": "You can render data server-side with a templating engine",
+                        "goal-icon": "./images/skills/ejs.png"
+                    },
+                    {
+                        "goal": "You can write documentation that other developers understand",
+                        "goal-icon": "./images/icons/documentation.png"
+                    },
+                    {
+                        "goal": "You can communicate over HTTP and understand the client / server flow",
+                        "goal-icon": "./images/icons/http.png"
+                    },
+                    {
+                        "goal": "You can store data in a database and update that data",
+                        "goal-icon": "./images/icons/database.png"
+                    },
+                    {
+                        "goal": "You can explain your code and the cohesion (flow) of your application",
+                        "goal-icon": "./images/icons/explanation.png"
+                    }
+                ]                
              },
              {
                  "title": "Frontend development",
@@ -172,14 +197,35 @@
                      }
                  ],
                  "goals": [
-                     "You improve your knowledge about core (ES6+) JavaScript concepts",
-                     "You know what progressive enhancement means (and understand how fallbacks work)",
-                     "You can build an enhanced frontend component with client-side JavaScript",
-                     "You understand how events work and can manipulate the DOM",
-                     "You understand the use of API's and can implement web and third-party API's",
-                     "You can optimize a front-end application for production use",
-                     "You are able to read documentation and research technical topics"
-                 ]
+                    {
+                        "goal": "You improve your knowledge about core (ES6+) JavaScript concepts",
+                        "goal-icon": "./images/icons/javascript.png"
+                    },
+                    {
+                        "goal": "You know what progressive enhancement means (and understand how fallbacks work)",
+                        "goal-icon": "./images/icons/progressive-enhancement.png"
+                    },
+                    {
+                        "goal": "You can build an enhanced frontend component with client-side JavaScript",
+                        "goal-icon": "./images/icons/frontend.png"
+                    },
+                    {
+                        "goal": "You understand how events work and can manipulate the DOM",
+                        "goal-icon": "./images/icons/events.png"
+                    },
+                    {
+                        "goal": "You understand the use of API's and can implement web and third-party API's",
+                        "goal-icon": "./images/icons/apis.png"
+                    },
+                    {
+                        "goal": "You can optimize a front-end application for production use",
+                        "goal-icon": "./images/icons/optimization.png"
+                    },
+                    {
+                        "goal": "You are able to read documentation and research technical topics",
+                        "goal-icon": "./images/icons/research.png"
+                    }
+                ]                
              }
          ],
          "linkGithub": "https://example.com/subject1",

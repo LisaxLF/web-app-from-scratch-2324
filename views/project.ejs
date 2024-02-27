@@ -74,21 +74,29 @@
                     <h3><%= projectData.IntroductionHeader2 %></h3>
                 </div>
                 <div class="topic-btns">
-                    <!-- for each lus for all courses title names -->
+                    <!-- for each loop for all course title names -->
+                    <% let isFirst = true; %>
                     <% for (const course of projectData.courses) { %>
-                    <span class="secondary-btn"><%= course.title %></span>
+                    <input name="goals" type="radio" class="secondary-btn" value="<%= course.title %>"
+                        id="<%= course.title %>" <%= isFirst ? 'checked' : '' %>>
+                    <label for="<%= course.title %>" class="secondary-btn"><%= course.title %></label>
+                    <% isFirst = false; %>
                     <% } %>
                 </div>
             </article>
             <article class="goals">
-                <h4>
-                    The goals
-                </h4>
-                <p>
-                    In this course, we've got some clear goals. They're like our guideposts to help you know what you'll
-                    learn. Take a look at what we're aiming for – it's all about making sure you pick up the skills and
-                    knowledge we're here to share. Let's explore these goals together.
-                </p>
+                <div class="goals-text">
+                    <h4>
+                        The goals
+                    </h4>
+                    <p>
+                        In this course, we've got some clear goals. They're like our guideposts to help you know what
+                        you'll
+                        learn. Take a look at what we're aiming for – it's all about making sure you pick up the skills
+                        and
+                        knowledge we're here to share. Let's explore these goals together.
+                    </p>
+                </div>
                 <div class="goals-wrapper">
                 </div>
             </article>
