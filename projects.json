@@ -313,7 +313,6 @@
             {
             "title": "Data Visualization",
             "individualGrade": "7",
-            "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
             "individualAssignment": "individual Assigment",
             "individualDescription": "In our Information Design minor, we began with a six-week focus on data visualization. Our task was to create three cohesive digital data visualizations using both the survey dataset and an external dataset.For this assignment, each visualization required a clear title and an explanation of its significance. We used various variables to highlight different aspects of the data and diverse chart types to effectively represent the information. At least one visualization had to incorporate multiple variables (a minimum of three tofour). Additionally, integrating at least one external dataset was essential to enhance our analysis.",
             "individualStory": [
@@ -372,7 +371,7 @@
              {
                 "title": "Tech Track",
                 "individualGrade": "8.3",
-                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Tech-Track-23-24",
                 "individualAssignment": "individual Assigment",
                 "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
                 "individualStory": [
@@ -426,11 +425,11 @@
              },
              {
                 "title": "Project Information",
-                "individualGrade": "8",
-                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
-                "individualAssignment": "individual Assigment",
-                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
-                "individualStory": [
+                "teamGrade": "8",
+                "linkGithubTeam": "https://github.com/LisaxLF/Project-Colombia",
+                "teamAssignment": "individual Assigment",
+                "teamDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "teamStory": [
                     {
                       "header": "the clients",
                       "paragraph": "As the course kicked off, we were greeted with six pitches from different companies, each with its own project. One stood out right away – the Colombian project. They wanted a fun, interactive web app to showcase their drawings, and I was immediately drawn to it. The reason I was drawn to this project is because my family is from Colombia, and I know all the places he had been to, so I was really excited."

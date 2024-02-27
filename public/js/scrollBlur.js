@@ -267,6 +267,7 @@ function RenderStory(courseData) {
                 </article>
                 <article class="topic-link">
                     <h5>Github</h5>
+                    // if there a link, add it       
                     <a href="${courseData.linkGithub2}">${courseData.linkGithub2}</a>
                 </article>
                 <article class="topic-grade">
