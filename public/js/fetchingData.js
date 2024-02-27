@@ -134,4 +134,3 @@ function sendToProjectPage(projectTitle) {
     projectLink.href = `/${projectTitle}`;
 }
 
-

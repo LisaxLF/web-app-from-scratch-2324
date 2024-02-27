@@ -343,6 +343,6 @@ p.goal-card-description {
     cursor: pointer;
 }
 
-.active{
+.slider-img.active{
     width: 200%;
 }
