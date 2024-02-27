@@ -225,8 +225,6 @@ function RenderGoals(courseData) {
 
 function RenderStory(courseData) {
 
-    console.log(courseData);
-    // HTML-structuur als een string in een template literal
     const topicStoryStructure = `
     <div class="topic-story-individual">
         <div class="topic-content-wrapper">
@@ -236,11 +234,11 @@ function RenderStory(courseData) {
             </article>
             <article class="topic-link">
                 <h5>Github</h5>
-                <a href="${courseData.linkGithub}">${courseData.linkGithub}</a>
+                <a href="${courseData.linkGithubIndividual}">${courseData.linkGithubIndividual}</a>
             </article>
             <article class="topic-grade">
                 <h5>Grade</h5>
-                <p>${courseData.grade}</p>
+                <p>${courseData.individualGrade}</p>
             </article>
         </div>
         <div class="topic-story-wrapper">
@@ -254,13 +252,47 @@ function RenderStory(courseData) {
     </div>
     `;
 
-
     // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
     const container = document.querySelector('.topic-story');
     container.innerHTML = topicStoryStructure;
+
+    // Als er een tweede opdracht is, voeg dan dezelfde structuur toe
+    if (courseData.hasOwnProperty('teamAssignment')) {
+        const topicStoryStructure = `
+        <div class="topic-story-team">
+            <div class="topic-content-wrapper">
+                <article class="topic-assignment">
+                    <h4>${courseData.teamAssignment}</h4>
+                    <p>${courseData.teamDescription}</p>
+                </article>
+                <article class="topic-link">
+                    <h5>Github</h5>
+                    <a href="${courseData.linkGithub2}">${courseData.linkGithub2}</a>
+                </article>
+                <article class="topic-grade">
+                    <h5>Grade</h5>
+                    <p>${courseData.teamGrade}</p>
+                </article>
+            </div>
+            <div class="topic-story-wrapper">
+                ${courseData.teamStory.map(story => `
+                    <article class="topic-story-paragraph">
+                        <h4>${story.header}</h4>
+                        <p>${story.paragraph}</p>
+                    </article>
+                `).join('')}
+            </div>
+        </div>
+        `;
+
+        // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
+        const container = document.querySelector('.topic-story');
+        container.innerHTML += topicStoryStructure;
+    }
 }
 
-/// Render image slider
+
+// Render image slider
 function ImageSlider() {
     // image slider event 
     const images = document.querySelectorAll(".slider-img");

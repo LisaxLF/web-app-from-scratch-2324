@@ -54,9 +54,10 @@
          "courses": [
             {
                 "title": "Project",
-                "grade": "7",
-                "linkGithub": "https://github.com/LisaxLF/Project-Tech",
-                "linkGithub2": "https://example.com/subject1",
+                "individualGrade": "7",
+                "teamGrade": "7",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "linkGithubTeam": "https://example.com/subject1",
                 "individualAssignment": "individual Assigment",
                 "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
                 "individualStory": [
@@ -129,8 +130,15 @@
                  ]
              },
              {
-                 "title": "Backend development",
-                 "individual": [{
+                "title": "Backend development",
+                "individualGrade": "7",
+                "teamGrade": "7",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "linkGithubTeam": "https://example.com/subject1",
+                "individualAssignment": "individual Assigment",
+                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualStory": [
+                    {
                          "header": "Setting Up a Server",
                          "paragraph": "For the backend, it was essential to have a server running to handle tasks like showing and sending data. In the first week, I learned to set up a basic server and then moved on to setting up basic routing for my application. We continued to enhance our server by ensuring it handled routes and served static files.\n\nThe server was required to accomplish at least three things:\n\nBasic routing: I created different routes (e.g., /about, /login) essential for the matching application.\nError handling: It responded with a 404 Not Found if users visited a route that didn't exist.\nServing static files: It served CSS, as well as media files like images, videos, or audio files.\n\nNext, I focused on building the interface and components for the matching application. With the server already up and running, it was time to send dynamic HTML to the client using a templating engine."
                      },
@@ -147,7 +155,10 @@
                          "paragraph": "Now, users have the capability to submit their new usernames, bios, etc., and update these details. These updated details will be reflected as new placeholders on the forms and on their displayed cards. Additionally, users can modify their preferred playstyle and ranks to find their preferred teammates."
                      }
                  ],
-                 "team": [{
+                "teamAssignment": "team Assigment",
+                "teamDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the team assignment.",
+                "teamStory": [
+                    {
                          "header": "My Features",
                          "paragraph": "For the team assignment, we were tasked with developing a feature to create a functional matching application. Interested in learning something new, I took it upon myself to select the login feature and begin working on it. This feature was vital for establishing user accounts and providing a secure platform for interactions within the application. My main focus in this project was primarily the login functionality. Login is crucial because each user needs their own page where they can manage personal activities, such as posting their pets, liking, and saving found pets. During login, it's important to create a session so that the user doesn't have to log in again for each route on our website. Additionally, having some security measures in place is essential to prevent hackers from easily accessing an account. I took these aspects into account when building the login function.\n\nI also tried to incorporate my individual part of the Tech project, which was updating profile data so that changes are reflected in the database and can be reused. As a user, you might want to change your name, email, or password, and this can be easily managed within the profile page.\n\nLastly, I implemented a logout function so that when the user is finished and wants to log out, the current session ends, and the user would need to log in again to access their page."
                      },
@@ -156,7 +167,8 @@
                          "paragraph": "For extra points, I conducted research on a specific topic from a provided list. I chose to explore bcrypt, which proved to be highly relevant given my focus on building a login page. This research was particularly beneficial as it provided insights into password hashing and enhanced the security of our application."
                      }
                  ],
-                 "goals": [{
+                 "goals": [
+                    {
                          "goal": "You can build web apps with Node and use packages from NPM",
                          "goal-icon": "./images/skills/node.png"
                      },
@@ -183,8 +195,14 @@
                  ]
              },
              {
-                 "title": "Frontend development",
-                 "individual": [{
+                "title": "Frontend development",
+                "individualGrade": "7",
+                "teamGrade": "7",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "linkGithubTeam": "https://example.com/subject1",
+                "individualAssignment": "individual Assigment",
+                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualStory": [{
                          "header": "Progessive Enchantment",
                          "paragraph": "For the front-end development course, I started working on the progressive enhancement aspect, which was a key grading topic.\n\nFor my application, I decided to implement Progressive Enhancement (PE) on the forms within the user settings. To facilitate finding new matches, I created a page with user settings containing forms where users can adjust their preferences.\n\n**HTML, CSS, and JS**\n\nWhenever the user selects more than two checkboxes, the browser triggers an alert to remind the user to only pick two options. Additionally, the text color changes to red briefly to draw attention to this message.\n\n**HTML, CSS**\n\nIn the absence of JavaScript, the settings still function, but some visual enhancements are lost. Unfortunately, without JavaScript, there's no mechanism to prevent users from selecting more than two options. However, the first two options selected will still be sent to the database, allowing for new matches to be generated.\n\n**HTML**\n\nDespite the absence of styling, users can still discern which form corresponds to which element.\nAdditionally, I added a custom footer to enhance the overall user experience."
                      },
@@ -193,7 +211,10 @@
                          "paragraph": "I incorporated two APIs into my project to enhance its functionality and user experience.\n\nThe first API I attempted to use was the Rocket League tracker API, which would have allowed me to retrieve real player data, such as ranks and stats, for display on user profile cards. However, due to limitations on free access, I had to find an alternative API that aligned with my project theme. Eventually, I discovered the random Useless Facts API, which provides random fun facts. I integrated this API into the user settings feature so that every time a user updates their preferences, they receive a new random fun fact.\n\nThe second API I incorporated was the Vibration API from Mozilla Docs. This API allows web apps to access vibration hardware on compatible devices, providing physical feedback to users. I implemented this API to trigger a short vibration whenever a user likes another gamer. Although I initially intended to use it for new match notifications as well, time constraints limited its implementation.\n\nThe Fetch API, which I used for interacting with the Useless Facts API, is a powerful web API for making network requests in JavaScript. It simplifies fetching resources from servers or API endpoints and handling responses, contributing to the dynamic functionality of my project."
                      }
                  ],
-                 "team": [{
+                "teamAssignment": "team Assigment",
+                "teamDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the team assignment.",
+                "teamStory": [
+                    {
                          "header": "Application",
                          "paragraph": "For the team assignment, we focused on enhancing the performance and speed of our application. To achieve this, I took the initiative to implement three key optimizations:\n\n1. Implementing Gzip Compression: I recognized the importance of reducing file sizes to improve page loading times. Therefore, I integrated Gzip compression, a widely-used algorithm that compresses web pages and files before transmission. This significantly minimized data transfer and accelerated page loading, enhancing the overall user experience.\n\n2. Lazy Loading: Recognizing the impact of media content on page load times, I implemented lazy loading. This technique defers the loading of non-essential resources, such as images and videos, until they are needed. By loading these resources dynamically as users interact with the page, we were able to achieve faster initial page loads and optimize bandwidth usage.\n\n3. Image Optimization with Sharp: Understanding the importance of image optimization for performance, I leveraged Sharp, a powerful node module, to process and optimize images. By utilizing Sharp alongside the Multer module for image uploads, we were able to transform and resize images to meet specific requirements. This included converting images to the Webp format for optimal web delivery and resizing them to a uniform size. These optimizations ensured that images were delivered efficiently, contributing to faster page loading and an enhanced user experience overall.\n\nBy implementing these optimizations, we successfully improved the performance and speed of our application, ultimately providing users with a smoother and more responsive browsing experience."
                      },
@@ -206,7 +227,8 @@
                          "paragraph": "In terms of how our front-end works together, we made sure that all parts of our website fit well and functioned smoothly. This meant organizing our HTML, CSS, and JavaScript in a way that made sense and didn't cause any problems. We wanted everything to feel consistent and easy to use for anyone visiting our site.\n\nWhen it comes to getting our website ready for the real world, we focused on making sure our code was solid and dependable. We spent time testing everything thoroughly to catch any issues and fix them. Our goal was to have a website that worked well and was reliable for anyone who wanted to use it."
                      }
                  ],
-                 "goals": [{
+                 "goals": [
+                    {
                          "goal": "You improve your knowledge about core (ES6+) JavaScript concepts",
                          "goal-icon": "./images/icons/javascript.png"
                      },
