@@ -107,12 +107,23 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
     z-index: 100;
 }
+
+.landing-page header{
+    background-color: transparent;
+
+}
+
+.detail-page header {
+    background-color: var(--color-primary-bg);
+}
+
+
 
 header img {
     width: 8rem;

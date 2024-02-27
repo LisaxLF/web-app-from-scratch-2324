@@ -1,4 +1,5 @@
- [{
+ [
+    {
          "title": "Blok Tech",
          "type": "Project",
          "description": "Project Tech is a hands-on learning experience where I'll learned about web things like how websites are built, creative coding, and managing projects efficiently. I picked up the skills needed to create, update, and improve modern web applications and websites. Making a beautiful and working matching web application.",
@@ -261,24 +262,224 @@
          ]
      },
      {
-         "title": "information design",
-         "type": "Minor",
-         "description": "Minor Information Design emphasizes three key aspects: Data Visualization, Tech Track, and Integration Project. Through these components, students develop skills in creating compelling visuals, mastering web technologies, and collaborating on real-world projects, offering a well-rounded educational experience.",
-         "courses": [{
-                 "title": "Datavisualisation",
-                 "grade": 7
+        "title": "information design",
+        "type": "Minor",
+        "description": "Minor Information Design emphasizes three key aspects: Data Visualization, Tech Track, and Integration Project. Through these components, students develop skills in creating compelling visuals, mastering web technologies, and collaborating on real-world projects, offering a well-rounded educational experience.",
+        "IntroductionHeader": "A Journey Through Phases",
+        "IntroductionHeader2": "the subjects to mastering information design",
+        "IntroductionText": "In the minor program, you will embark on a journey through three phases over six weeks. Initially, in Part 1, students from both Tech and Visual tracks come together to grasp the fundamentals of data visualization. Transitioning to Part 2, students diverge into specialized tech and visual tracks, delving deeper into specific skills. Finally, in Part 3, students apply their newfound knowledge in real-world projects, collaborating with external clients. Through this journey, they enhance their technical skills and teamwork abilities, all while exploring the realm of data visualization.",
+        "IntroductionImage":"./images/mockups/spaceMissionImage.png",
+        "mockup": "./images/mockups/datavis.png",
+        "individualImages": ["./images/mockups/spaceMissionImage.png", "./images/mockups/spaceMissionImage.png", "./images/mockups/spaceMissionImage.png", "./images/mockups/spaceMissionImage.png","./images/mockups/spaceMissionImage.png", "./images/mockups/spaceMissionImage.png"],
+        "resources": [
+            {
+                 "name": "Figma",
+                 "icon": "./images/skills/Figma.png"
              },
              {
-                 "title": "Tech Track",
-                 "grade": 8.3
+                 "name": "html",
+                 "icon": "./images/skills/html.png"
              },
              {
-                 "title": "Project information",
-                 "grade": 8
-             }
+                "name": "javascript",
+                "icon": "./images/skills/javascript.png"
+             },
+             {
+                "name": "css",
+                "icon": "./images/skills/css.png"
+             },
+             {
+                "name": "github",
+                "icon": "./images/skills/github.png"
+             },
+             {
+                "name": "D3.js",
+                "icon": "./images/skills/d3.png"
+             },
+            {
+                "name": "panzoom.js",
+                "icon": "./images/skills/panzoom.png"
+            },
+            {
+                "name": "reveal.js",
+                "icon": "./images/skills/reveal.png"
+            },
+            {
+                "name": "excel",
+                "icon": "./images/skills/excel.png"
+            }
          ],
-         "linkGithub": "https://example.com/subject1",
-         "colors": ["#B74F6B", "#89FFFF"]
+        "courses": [
+            {
+            "title": "Data Visualization",
+            "individualGrade": "7",
+            "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+            "individualAssignment": "individual Assigment",
+            "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+            "individualStory": [
+                {
+                     "header": "Starting the journey",
+                     "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
+                 },
+                 {
+                     "header": "matching application 1",
+                     "paragraph": "After i came up with the 3 ideas, i had to choose one of them to work out. I chose the idea of a gaming application where you can find people to play with. I chose this idea because i like to game in my spare time and i know that there are a lot of people who are looking for people to play with."
+                 },
+                 {
+                     "header": "matching application 1",
+                     "paragraph": "After i chose the idea, i started building the application. I started with the design of the application. I made a few mockups of the application and i chose the one that i liked the most. After that i started building the application with the technologies that i learned in the previous courses."
+                 },
+                 {
+                     "header": "final concept",
+                     "paragraph": "After building the application, i had to make sure that the application was working properly. I tested the application and made sure that everything was working properly. After that i had to make sure that the application was responsive and that it looked good on every device. After that i was done with the application."
+                 },
+                 {
+                     "header": "Jobstories",
+                     "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
+                 },
+                 {
+                     "header": "the requirments list",
+                     "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
+                 }
+             ],
+             "goals": [
+                {
+                     "goal": "understanding and applying CHRTS model en visual encoding",
+                     "goal-icon": "./images/icons/chrts.png"
+                 },
+                 {
+                     "goal": "Students select suitable diagram types for diverse data inquiries confidently",
+                     "goal-icon": "./images/icons/diagram.png"
+                 },
+                 {
+                     "goal": "Students analyze, organize, and sketch data and information",
+                     "goal-icon": "./images/icons/designing.png"
+                 },
+                 {
+                     "goal": "Students apply appropriate digital tools for visualizing information",
+                     "goal-icon": "./images/icons/tools.png"
+                 },
+                 {
+                     "goal": "Students report learning process clearly and convincingly, using visuals",
+                     "goal-icon": "./images/icons/documentation.png"
+                 },
+                 {
+                    "goal": "Students actively seek examples and info, developing interest",
+                    "goal-icon": "./images/icons/explanation.png"
+                }
+             ]
+             },
+             {
+                "title": "Tech Track",
+                "individualGrade": "8.3",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "individualAssignment": "individual Assigment",
+                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualStory": [
+                    {
+                         "header": "Starting the journey",
+                         "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i came up with the 3 ideas, i had to choose one of them to work out. I chose the idea of a gaming application where you can find people to play with. I chose this idea because i like to game in my spare time and i know that there are a lot of people who are looking for people to play with."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i chose the idea, i started building the application. I started with the design of the application. I made a few mockups of the application and i chose the one that i liked the most. After that i started building the application with the technologies that i learned in the previous courses."
+                     },
+                     {
+                         "header": "final concept",
+                         "paragraph": "After building the application, i had to make sure that the application was working properly. I tested the application and made sure that everything was working properly. After that i had to make sure that the application was responsive and that it looked good on every device. After that i was done with the application."
+                     },
+                     {
+                         "header": "Jobstories",
+                         "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
+                     },
+                     {
+                         "header": "the requirments list",
+                         "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
+                     }
+                 ],
+                 "goals": [
+                    {
+                         "goal": "Clean, transform data with functional programming patterns",
+                         "goal-icon": "./images/icons/transform.png"
+                     },
+                     {
+                         "goal": "Students create interactive visualizations from (external) data",
+                         "goal-icon": "./images/icons/github.png"
+                     },
+                     {
+                         "goal": "Use D3 or other frameworks to create interactive visualization(s)",
+                         "goal-icon": "./images/icons/d3.png"
+                     },
+                     {
+                         "goal": "Students work with front-end framework and think in components",
+                         "goal-icon": "./images/icons/frontend.png"
+                     },
+                     {
+                         "goal": "Apply meaningul animation and / or storytelling in your visualization.",
+                         "goal-icon": "./images/icons/animation.png"
+                     },
+                    {
+                        "goal": "Refactor, debug and read complex programs (code)t",
+                        "goal-icon": "./images/icons/code.png"
+                    }
+                 ]
+             },
+             {
+                "title": "Project Information",
+                "individualGrade": "8",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Tech",
+                "individualAssignment": "individual Assigment",
+                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualStory": [
+                    {
+                         "header": "Starting the journey",
+                         "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i came up with the 3 ideas, i had to choose one of them to work out. I chose the idea of a gaming application where you can find people to play with. I chose this idea because i like to game in my spare time and i know that there are a lot of people who are looking for people to play with."
+                     },
+                     {
+                         "header": "matching application 1",
+                         "paragraph": "After i chose the idea, i started building the application. I started with the design of the application. I made a few mockups of the application and i chose the one that i liked the most. After that i started building the application with the technologies that i learned in the previous courses."
+                     },
+                     {
+                         "header": "final concept",
+                         "paragraph": "After building the application, i had to make sure that the application was working properly. I tested the application and made sure that everything was working properly. After that i had to make sure that the application was responsive and that it looked good on every device. After that i was done with the application."
+                     },
+                     {
+                         "header": "Jobstories",
+                         "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
+                     },
+                     {
+                         "header": "the requirments list",
+                         "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
+                     }
+                 ],
+                 "goals": [
+                    {
+                         "goal": "Create prototypes for user, expert, and client feedback.",
+                         "goal-icon": "./images/icons/designing.png"
+                     },
+                     {
+                         "goal": "Design in diverse teams for multidisciplinary experience",
+                         "goal-icon": "./images/icons/github.png"
+                     },
+                     {
+                         "goal": "Explore information design in professional settings",
+                         "goal-icon": "./images/icons/editor.png"
+                     },
+                     {
+                         "goal": "Apply data visualization skills in client projects.",
+                         "goal-icon": "./images/icons/code.png"
+                     }
+                 ]
+             }
+         ]
      }, {
          "title": "Web design & development",
          "type": "Minor",
@@ -287,7 +488,6 @@
              "title": "Project Tech",
              "grade": 0
          }],
-         "linkGithub": "https://example.com/subject1",
-         "colors": ["#FFFFFF", "#FFFFFF"]
+         "linkGithub": "https://example.com/subject1"
      }
  ]
