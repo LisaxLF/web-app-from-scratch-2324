@@ -152,7 +152,7 @@
                     },
                     {
                         "goal": "You can render data server-side with a templating engine",
-                        "goal-icon": "./images/skills/ejs.png"
+                        "goal-icon": "./images/icpns/ejs.png"
                     },
                     {
                         "goal": "You can write documentation that other developers understand",
@@ -202,11 +202,11 @@
                         "goal-icon": "./images/icons/javascript.png"
                     },
                     {
-                        "goal": "You know what progressive enhancement means (and understand how fallbacks work)",
+                        "goal": "You know what progressive enhancement means",
                         "goal-icon": "./images/icons/progressive-enhancement.png"
                     },
                     {
-                        "goal": "You can build an enhanced frontend component with client-side JavaScript",
+                        "goal": "You can build an enhanced frontend component on client-side",
                         "goal-icon": "./images/icons/frontend.png"
                     },
                     {
@@ -223,7 +223,7 @@
                     },
                     {
                         "goal": "You are able to read documentation and research technical topics",
-                        "goal-icon": "./images/icons/research.png"
+                        "goal-icon": "./images/icons/documentation.png"
                     }
                 ]                
              }
