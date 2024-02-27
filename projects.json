@@ -7,6 +7,8 @@
          "IntroductionText": "In Project Tech, you'll take your first steps toward becoming a well-rounded web developer. Imagine building a dynamic prototype for an app where people can find matching connections. The cool part is, you'll learn not just the technical stuff, but also some really helpful skills. We'll dive into the 'soft' skills, like understanding how to read instructions, working together with others, and being a good team player. On the more technical side, you'll get comfortable using important tools, like the command line and version control. This project isn't just about coding. It's like an adventure that helps you learn how to do cool things on the web. By the end, you'll not only have a cool prototype but also a bunch of skills that will help you keep growing as a web developer.",
          "IntroductionImage": "./images/mockups/IphoneImage.png",
          "mockup": "./images/mockups/rocketFinderz.png",
+         "individualImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
+         "teamImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
          "resources": [{
                  "name": "EJS",
                  "icon": "./images/skills/ejs.png"
@@ -54,7 +56,6 @@
                  "linkGithub": "https://github.com/LisaxLF/Project-Tech",
                  "linkGithub2": "https://example.com/subject1",
                  "individualAssignment": "individual Assigment",
-                 "individualImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
                  "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
                  "individualStory": [{
                          "header": "Starting the journey",
@@ -77,9 +78,9 @@
                          "paragraph": "I learned a lot from this project. I learned how to build a dynamic prototype of a matching application. I learned how to work with the technologies that i learned in the previous courses. I also learned how to make a responsive application and how to make sure that the application looks good on every device."
                      },
                      {
-                        "header": "the requirments list",
-                        "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
-                      }                       
+                         "header": "the requirments list",
+                         "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
+                     }
                  ],
                  "team assignment": [{
                          "header": "Ideas & Concept",

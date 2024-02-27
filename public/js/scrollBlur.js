@@ -78,6 +78,8 @@ function RenderResources(projectData) {
     }
 }
 
+// ASSIGNMENTS OVERVIEW
+
 async function showGoals() {
     const projectData = await fetchProjectData();
 
@@ -121,6 +123,9 @@ async function getButton(projectData) {
 
                     // Render the project goals with the updated data
                     RenderGoals(courseData);
+
+                    // Render the project story
+                    RenderStory(courseData);
                 }
             });
         });
@@ -219,6 +224,7 @@ function RenderGoals(courseData) {
 }
 
 function RenderStory(courseData) {
+
     console.log(courseData);
     // HTML-structuur als een string in een template literal
     const topicStoryStructure = `
@@ -247,26 +253,41 @@ function RenderStory(courseData) {
         </div>
     </div>
     `;
-    
+
 
     // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
     const container = document.querySelector('.topic-story');
     container.innerHTML = topicStoryStructure;
 }
 
-// Render image slider
-function RenderImageSlider(courseData) {
-    // clear the image slider
-    const imageSliderStructure = 
-    `
-    <div class="topc-image-container">
-    ${courseData.individualImages.map(image => `
-        <img src="${image}" alt="image">
-`).join('')}
-    `
+/// Render image slider
+function ImageSlider() {
+    // image slider event 
+    const images = document.querySelectorAll(".slider-img");
 
+    function clearActiveImage() {
+        images.forEach(function (image) {
+            image.classList.remove("active");
+        });
+    }
+
+    images.forEach(function (image, index) {
+        image.onclick = function () {
+            event.stopPropagation(); // Belangrijk om clearActiveImage() niet bij elke klik aan te roepen
+            if (images[index].classList.contains("active")) {
+                images[index].classList.remove("active");
+            } else {
+                clearActiveImage(index);
+                images[index].classList.add("active");
+            }
+        };
+    });
+
+    window.addEventListener("click", () => {
+        clearActiveImage();
+    });
 }
 
-
+ImageSlider();
 showGoals();
 showResources();
