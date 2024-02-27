@@ -9,7 +9,6 @@
          "IntroductionImage": "./images/mockups/IphoneImage.png",
          "mockup": "./images/mockups/rocketFinderz.png",
          "individualImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png","./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
-         "teamImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
          "resources": [
             {
                  "name": "EJS",
