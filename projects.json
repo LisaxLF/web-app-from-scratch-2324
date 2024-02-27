@@ -426,11 +426,11 @@
              },
              {
                 "title": "Project Information",
-                "teamGrade": "8",
-                "linkGithubTeam": "https://github.com/LisaxLF/Project-Colombia",
-                "teamAssignment": "team Assigment",
-                "teamDescription": "The last course of the minor was the project, where we worked as teams together full-time for five weeks on interactive data visualizations or infographics for clients. This collaborative effort brought together students from different tracks, allowing them to apply what they had learned. \n During the project, teams had frequent interactions with organizations and companies holding data and seeking ways to make it usable and accessible. At the beginning of the project, project partners presented their design assignments, and teams were able to indicate their preferences for project partners.",
-                "teamStory": [
+                "individualGrade": "8",
+                "linkGithubIndividual": "https://github.com/LisaxLF/Project-Colombia",
+                "individualAssignment": "team Assigment",
+                "individualDescription": "The last course of the minor was the project, where we worked as teams together full-time for five weeks on interactive data visualizations or infographics for clients. This collaborative effort brought together students from different tracks, allowing them to apply what they had learned. \n During the project, teams had frequent interactions with organizations and companies holding data and seeking ways to make it usable and accessible. At the beginning of the project, project partners presented their design assignments, and teams were able to indicate their preferences for project partners.",
+                "individualStory": [
                     {
                       "header": "the clients",
                       "paragraph": "As the course kicked off, we were greeted with six pitches from different companies, each with its own project. One stood out right away – the Colombian project. They wanted a fun, interactive web app to showcase their drawings, and I was immediately drawn to it. The reason I was drawn to this project is because my family is from Colombia, and I know all the places he had been to, so I was really excited."
