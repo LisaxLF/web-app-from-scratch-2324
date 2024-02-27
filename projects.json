@@ -152,15 +152,15 @@
                     },
                     {
                         "goal": "You can render data server-side with a templating engine",
-                        "goal-icon": "./images/icpns/ejs.png"
+                        "goal-icon": "./images/icons/ejs.png"
                     },
-                    {
+                    {   
                         "goal": "You can write documentation that other developers understand",
                         "goal-icon": "./images/icons/documentation.png"
                     },
                     {
                         "goal": "You can communicate over HTTP and understand the client / server flow",
-                        "goal-icon": "./images/icons/http.png"
+                        "goal-icon": "./images/icons/server.png"
                     },
                     {
                         "goal": "You can store data in a database and update that data",
