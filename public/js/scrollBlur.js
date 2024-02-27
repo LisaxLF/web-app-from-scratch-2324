@@ -88,7 +88,7 @@ async function showGoals() {
     RenderGoals(courseData);
 }
 
-async function getButton(projectData) { 
+async function getButton(projectData) {
     return new Promise((resolve) => {
         // get the radio buttons
         const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -151,6 +151,10 @@ function RenderGoals(courseData) {
     const goalWrapper = document.querySelector('.goals-wrapper');
     goalWrapper.innerHTML = '';
 
+    // transition for each render wrapper
+    goalWrapper.style.transition = 'all 0.5s ease-in-out';
+
+
     // Use try-catch to handle errors within forEach
     try {
         courseData.goals.forEach(goal => {
@@ -204,11 +208,47 @@ function RenderGoals(courseData) {
 
             // Voeg de doelkaart toe aan de goal-wrapper
             goalWrapper.appendChild(goalCard);
+
         });
     } catch (error) {
         console.error('Error processing goals:', error);
     }
 }
+
+function RenderStory(courseData) {
+    // HTML-structuur als een string in een template literal
+    const topicStoryStructure = `
+    <div class="topic-story-individual">
+        <div class="topic-content-wrapper">
+            <section>
+                <h4>${courseData.individualAssignment}</h4>
+                <p>${courseData.individualDescription}</p>
+            </section>
+            <section class="topic-link">
+                <h5>Github</h5>
+                <a href="${courseData.linkGithub}">${courseData.linkGithub}</a>
+            </section>
+            <section class="topic-grade">
+                <h5>Grade</h5>
+                <p>${courseData.grade}</p>
+            </section>
+        </div>
+        <div class="topic-story-wrapper">
+            ${courseData.individualStory.map(story => `
+                <section class="paragraphs">
+                    <h5>${story.header}</h5>
+                    <p>${story.paragraph}</p>
+                </section>
+            `).join('')}
+        </div>
+    </div>
+    `;
+
+    // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
+    const container = document.querySelector('.topic-story');
+    container.innerHTML = topicStoryStructure;
+}
+
 
 showGoals();
 showResources();

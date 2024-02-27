@@ -52,11 +52,13 @@
          "courses": [
             {
                  "title": "Project",
-                 "individual assignment": [
+                 "grade": "7",
+                 "linkGithub": "https://github.com/LisaxLF/Project-Tech",
+                 "linkGithub2": "https://example.com/subject1",
+                 "individualAssignment": "individual Assigment",
+                 "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                 "individualStory": [
                     {
-                        "introduction": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment."
-                     },
-                     {
                          "header": "Starting the journey",
                          "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
                      },
@@ -228,7 +230,6 @@
                 ]                
              }
          ],
-         "linkGithub": "https://example.com/subject1",
          "colors": ["#BCE2F3", "#EECE79"]
      },
      {
