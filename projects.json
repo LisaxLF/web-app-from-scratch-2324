@@ -9,7 +9,8 @@
          "mockup": "./images/mockups/rocketFinderz.png",
          "individualImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
          "teamImages": ["./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png", "./images/mockups/IphoneImage.png"],
-         "resources": [{
+         "resources": [
+            {
                  "name": "EJS",
                  "icon": "./images/skills/ejs.png"
              },
@@ -50,14 +51,16 @@
                  "icon": "./images/skills/sass.png"
              }
          ],
-         "courses": [{
-                 "title": "Project",
-                 "grade": "7",
-                 "linkGithub": "https://github.com/LisaxLF/Project-Tech",
-                 "linkGithub2": "https://example.com/subject1",
-                 "individualAssignment": "individual Assigment",
-                 "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
-                 "individualStory": [{
+         "courses": [
+            {
+                "title": "Project",
+                "grade": "7",
+                "linkGithub": "https://github.com/LisaxLF/Project-Tech",
+                "linkGithub2": "https://example.com/subject1",
+                "individualAssignment": "individual Assigment",
+                "individualDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the individual assignment.",
+                "individualStory": [
+                    {
                          "header": "Starting the journey",
                          "paragraph": "For the individual assignment of Project-Tech, were i have to build a dynamic prototype of a matching application, i have to come up with a few different ideas for a matching application. I immediately thought of someting i like to do in my spare time, which is gaming. I came up with 3 versions of a gaming application."
                      },
@@ -82,7 +85,10 @@
                          "paragraph": "Now that I have chosen my feature, it's time to outline the requirements for its development. Here's what I need:\n\nMust-Have:\nHomepage: A central hub to access all my matches\nSettings Page: Where I can manage my profile and preferences\nForms: For posting and updating my preferences\nProfile Card: To view my own profile\n\nShould-Have:\nMatches Page: A dedicated section to view all matches [S]\nChat Section: To communicate with my matches [S]\nGameplay and Rating System: A feature allowing us to play together and rate each other afterwards [S]"
                      }
                  ],
-                 "team assignment": [{
+                "teamAssignment": "team Assigment",
+                "teamDescription": "This course is divided into two parts: the individual assignment and the team assignment. In this section I will explain the team assignment.",
+                "teamStory": [
+                    {
                          "header": "Ideas & Concept",
                          "paragraph": "PawfectMatch started as a web app that matches people with adoptable pets. With a team of five, we developed this basic feature into a working web app. We brainstormed and decided which features were needed to make a cool web app."
                      },
@@ -99,7 +105,8 @@
                          "paragraph": "I developed a small branding guideline for the team to ensure a cohesive look. Although the application we're working on already had chosen colors, I made some adjustments and iterations to align them with our branding style. Each team member is free to choose the look and feel within their own feature, but they must adhere to the branding style. Through the already chosen colors and playful fonts, I tried to create a pleasant feeling for visitors to the website. Additionally, the photos of the animals contribute to making the site even more enjoyable. For the buttons, I decided to keep them simple yet clear. The buttons in the header remain consistent, and the text 'PawfectMatch' leads to the homepage."
                      }
                  ],
-                 "goals": [{
+                 "goals": [
+                    {
                          "goal": "You can design and develop a dynamic matching app",
                          "goal-icon": "./images/icons/designing.png"
                      },
@@ -229,8 +236,7 @@
                      }
                  ]
              }
-         ],
-         "colors": ["#BCE2F3", "#EECE79"]
+         ]
      },
      {
          "title": "information design",

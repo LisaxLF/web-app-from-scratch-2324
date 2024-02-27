@@ -302,6 +302,12 @@ p.goal-card-description {
 }
 
 /* IMAGE SLIDER */
+.detail-page-images {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .topic-image-container {
     height: 400px;
     aspect-ratio: 1.5 / 1;

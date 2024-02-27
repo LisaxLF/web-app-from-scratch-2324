@@ -105,10 +105,11 @@
         </section>
         <section class="detail-page-images">
             <div class="topic-image-container">
-                <!-- For in loop to iterate over each course -->
-                
-
-                </div>
+                <!-- Looping trough each image -->
+                <% for (const image of projectData.individualImages) { %>
+                <img class="slider-img" src="<%= image %>" alt="project image">
+                <% } %>
+            </div>
         </section>
     </main>
 </body>
