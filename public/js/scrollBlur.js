@@ -224,74 +224,69 @@ function RenderGoals(courseData) {
 }
 
 function RenderStory(courseData) {
-    if (courseData.hasOwnProperty('individualAssignment')) {
-        const topicStoryStructure = `
-        <div class="topic-story-individual">
-            <div class="topic-content-wrapper">
-                <article class="topic-assignment">
-                    <h4>${courseData.individualAssignment}</h4>
-                    <p>${courseData.individualDescription}</p>
-                </article>
-                <article class="topic-link">
-                    <h5>Github</h5>
-                    <a href="${courseData.linkGithubIndividual}">${courseData.linkGithubIndividual}</a>
-                </article>
-                <article class="topic-grade">
-                    <h5>Grade</h5>
-                    <p>${courseData.individualGrade}</p>
-                </article>
-            </div>
-            <div class="topic-story-wrapper">
-                ${courseData.individualStory.map(story => `
-                    <article class="topic-story-paragraph">
-                        <h4>${story.header}</h4>
-                        <p>${story.paragraph}</p>
+    const container = document.querySelector('.topic-story');
+
+    // clear the story
+    container.innerHTML = '';
+
+    const topicStoryStructure = `
+            <div class="topic-story-individual">
+                <div class="topic-content-wrapper">
+                    <article class="topic-assignment">
+                        <h4>${courseData.individualAssignment}</h4>
+                        <p>${courseData.individualDescription}</p>
                     </article>
-                `).join('')}
-            </div>
-        </div>
-        `;
-    
-        // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
-        const container = document.querySelector('.topic-story');
-        container.innerHTML = topicStoryStructure;
-    } else if (courseData.hasOwnProperty('teamAssignment')) {
-        const topicStoryStructure = `
-        <div class="topic-story-team">
-            <div class="topic-content-wrapper">
-                <article class="topic-assignment">
-                    <h4>${courseData.teamAssignment}</h4>
-                    <p>${courseData.teamDescription}</p>
-                </article>
-                <article class="topic-link">
-                    <h5>Github</h5>
-                    // if there a link, add it       
-                    <a href="${courseData.linkGithub2}">${courseData.linkGithub2}</a>
-                </article>
-                <article class="topic-grade">
-                    <h5>Grade</h5>
-                    <p>${courseData.teamGrade}</p>
-                </article>
-            </div>
-            <div class="topic-story-wrapper">
-                ${courseData.teamStory.map(story => `
-                    <article class="topic-story-paragraph">
-                        <h4>${story.header}</h4>
-                        <p>${story.paragraph}</p>
+                    <article class="topic-link">
+                        <h5>Github</h5>
+                        <a href="${courseData.linkGithubIndividual}">${courseData.linkGithubIndividual}</a>
                     </article>
-                `).join('')}
+                    <article class="topic-grade">
+                        <h5>Grade</h5>
+                        <p>${courseData.individualGrade}</p>
+                    </article>
+                </div>
+                <div class="topic-story-wrapper">
+                    ${courseData.individualStory.map(story => `
+                        <article class="topic-story-paragraph">
+                            <h4>${story.header}</h4>
+                            <p>${story.paragraph}</p>
+                        </article>
+                    `).join('')}
+                </div>
             </div>
-        </div>
         `;
 
-        // Selecteer de container voor het verhaal en voeg de HTML-structuur toe
-        const container = document.querySelector('.topic-story');
-        container.innerHTML += topicStoryStructure;
-    } else {
-        console.error('No story found');
-    }
+    container.innerHTML += topicStoryStructure;
+
+    const topicStoryTeamStructure = `
+            <div class="topic-story-team">
+                <div class="topic-content-wrapper">
+                    <article class="topic-assignment">
+                        <h4>${courseData.teamAssignment}</h4>
+                        <p>${courseData.teamDescription}</p>
+                    </article>
+                    <article class="topic-link">
+                        <h5>Github</h5>
+                        <a href="${courseData.linkGithub2}">${courseData.linkGithub2}</a>
+                    </article>
+                    <article class="topic-grade">
+                        <h5>Grade</h5>
+                        <p>${courseData.teamGrade}</p>
+                    </article>
+                </div>
+                <div class="topic-story-wrapper">
+                    ${courseData.teamStory.map(story => `
+                        <article class="topic-story-paragraph">
+                            <h4>${story.header}</h4>
+                            <p>${story.paragraph}</p>
+                        </article>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+    container.innerHTML += topicStoryTeamStructure;
 }
-
 
 // Render image slider
 function ImageSlider() {
@@ -320,6 +315,8 @@ function ImageSlider() {
         clearActiveImage();
     });
 }
+
+
 
 ImageSlider();
 showGoals();

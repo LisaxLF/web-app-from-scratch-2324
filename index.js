@@ -31,6 +31,52 @@ app.get('/', async (_req, res) => {
     }
 });
 
+//route for the about page
+app.get('/about', async (req, res) => {
+    try {
+        res.render('about', {
+            about
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error occurred while reading files.');
+    }
+});
+
+//route for the contact page
+app.get('/contact', async (req, res) => {
+    try {
+        res.render('contact', {
+            contact
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error occurred while reading files.');
+    }
+});
+
+//route for the 404 page
+// app.get('*', async (req, res) => {
+//     try {
+//         res.render('404');
+//     } catch (error) {
+//         console.error('Error:', error);
+//         res.status(500).send('Error occurred while reading files.');
+//     }
+// });
+
+//route for cv download
+app.get('/download', function (req, res) {
+    try {
+        const file = `${__dirname}/public/downloads/CVLisa.pdf`;
+        res.download(file);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Error occurred while reading files.');
+    }
+});
+
+
 // Route for the project page
 app.get('/:title', async (req, res) => {
     try {

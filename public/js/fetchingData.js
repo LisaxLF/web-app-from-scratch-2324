@@ -52,21 +52,26 @@ async function renderProjectData(projectData) {
     projectImage.src = projectData.mockup;
 }
 
+const header = document.querySelector('header');
+const fullscreenProject = document.querySelector('.fullscreen-project');
+
 // Show the project with animation
 async function showProject() {
-    const fullscreenProject = document.querySelector('.fullscreen-project');
+    // when active headers net to be hidden 
+    header.classList.add('header-hide');
 
+    // add the active class
     fullscreenProject.classList.add('active');
 
 }
 
 // Hide the project with animation
 function closeProject() {
-    const fullscreenProject = document.querySelector('.fullscreen-project');
-
     // remove the active class
     fullscreenProject.classList.remove('active');
 
+    // when active headers net to be shown  
+    header.classList.remove('header-hide');
 }
 
 function RenderTags(projectData) {
@@ -133,4 +138,3 @@ function sendToProjectPage(projectTitle) {
     // Send to the project page route
     projectLink.href = `/${projectTitle}`;
 }
-

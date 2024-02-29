@@ -114,7 +114,7 @@ header {
     z-index: 100;
 }
 
-.landing-page header{
+.landing-page header {
     background-color: transparent;
 
 }
@@ -158,7 +158,7 @@ section {
 /* SECTION 1 - LANDING */
 
 /* background grain */
-.landing-page section:first-of-type{
+.landing-page section:first-of-type {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -168,7 +168,8 @@ section {
     flex-direction: column;
 }
 
-.landing-page section:first-of-type>img, .grain {
+.landing-page section:first-of-type>img,
+.grain {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
@@ -442,7 +443,7 @@ section:nth-of-type(3)>img {
 
 .scroll {
     display: flex;
-    width: 90%;
+    width: 75%;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
     mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
@@ -551,7 +552,7 @@ section:nth-of-type(3)>img {
 
 /* section 4 */
 .landing-page section:nth-of-type(4) {
-    height: fit-content;
+    padding-top: 4em;
 }
 
 .landing-page section:nth-of-type(4)>div:first-of-type {
@@ -576,6 +577,7 @@ section:nth-of-type(3)>img {
     display: flex;
     align-items: center;
     padding: 1em;
+    cursor: pointer;
 }
 
 .project .bg-mask img {
@@ -636,7 +638,7 @@ h4 {
     -webkit-text-fill-color: transparent;
 }
 
-.topic-story-paragraph > h4 {
+.topic-story-paragraph>h4 {
     color: vare(--color-secondary-text-white);
 }
 
@@ -826,9 +828,62 @@ h4 {
     }
 
     .scroll {
-        width: 70%;
+        width: 55%;
     }
+
+    /* CARDS */
+    .card {
+        margin-right: .8em;
+        /* Ruimte tussen de kaarten */
+        width: 100%;
+        height: 110px;
+        width: 100px;
+        perspective: 1000px;
+    }
+
+    .front,
+    .back {
+        gap: .5rem;
+    }
+
+    .front>p {
+        margin: 0;
+        font-size: .7em;
+        font-style: italic;
+    }
+
+    .icons {
+        width: 32px;
+        height: 32px;
+    }
+
+    .back span {
+        font-size: 1rem;
+        font-style: bold;
+    }
+
+    .landing-page section:nth-of-type(4)>article:first-of-type {
+        max-width: 500px;
+        margin-bottom: 25px;
+    }
+
+    /* .project h4 {
+        font-size: .8rem;
+    }
+
+    .project .discription {
+        line-height: 16px;
+    }
+
+    .fullscreen-project .project-description {
+        font-size: .65rem;
+        line-height: 16px;
+    }
+
+    .tag-style {
+        font-size: .6rem; */
 }
+
 
 /* BREAKPOINTS */
 
@@ -935,7 +990,7 @@ h4 {
 }
 
 /* Desktop breakpoints (400px tot 800px) */
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 400px) and (max-width: 999px) {
     h1 {
         font-size: 3.2rem;
     }
@@ -1071,7 +1126,7 @@ h4 {
 }
 
 /* Desktop breakpoints (800px tot 1200) */
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 1000px) and (max-width: 1399px) {
     h1 {
         font-size: 3.2rem;
     }
@@ -1113,12 +1168,9 @@ h4 {
         gap: 1em;
     }
 
-    .landing-page section:nth-of-type(4) {
-        height: 100vh;
-    }
-
-    .scroll {
-        width: 65%;
+    /* All sections */
+    .detail-page section {
+        padding: 4em 4em;
     }
 
     /* section 1 */
@@ -1231,20 +1283,26 @@ h4 {
         font-size: .6rem;
     }
 
+    .fullscreen-project .left-side .project-content {
+        padding: 2em;
+    }
+
 }
 
 /* Grote desktops (1200px en groter) */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     h1 {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.4rem;
+        line-height: 35px;
+        margin-top: 0.005em;
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 30px;
     }
 
@@ -1253,7 +1311,7 @@ h4 {
     }
 
     p {
-        font-size: 1rem;
+        font-size: .9rem;
         line-height: 22px;
         font-weight: 200;
     }
@@ -1281,12 +1339,19 @@ h4 {
         gap: 1em;
     }
 
-    .landing-page section:nth-of-type(4) {
-        height: 100vh;
+    .landing-page section:nth-of-type(2)>article:first-of-type>div:first-of-type {
+        padding: 0.8em 0;
     }
 
-    .scroll {
-        width: 80%;
-    }
+}
 
+/* header hide */
+.header-hide {
+    transform: translateY(-100%);
+    transition: all 500ms ease-in-out;
+}
+
+header {
+    transform: translateY(0);
+    transition: all 500ms ease-in-out;
 }
