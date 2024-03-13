@@ -12,7 +12,7 @@ body {
 
 html,
 body {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 h1,
@@ -443,7 +443,7 @@ section:nth-of-type(3)>img {
 
 .scroll {
     display: flex;
-    width: 75%;
+    width: 95%;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
     mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
@@ -902,7 +902,7 @@ h4 {
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     h3 {
@@ -947,8 +947,8 @@ h4 {
         margin-right: .8em;
         /* Ruimte tussen de kaarten */
         width: 100%;
-        height: 100px;
-        width: 80px;
+        height: 110px;
+        width: 90px;
         perspective: 1000px;
     }
 
@@ -969,12 +969,16 @@ h4 {
     }
 
     .back span {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-style: bold;
+
+        > p {
+            font-size: .8em;
+        }
     }
 
     .landing-page section:nth-of-type(4) {
-        height: 100vh;
+        height: 100%;
     }
 
     .landing-page section:nth-of-type(4)>div:first-of-type {
@@ -985,6 +989,52 @@ h4 {
 
     .landing-page section:nth-of-type(4)>article:first-of-type {
         margin-bottom: 30px;
+    }
+
+    /* full screen active */
+    .fullscreen-project {
+        flex-direction: column;
+
+        .left-side {
+            width: 100%;
+            height: 60%;
+        }
+
+        .right-side {
+            width: 100%;
+            height: 40%;
+
+            > .project-image .project-mockup {
+                width: 35%;
+            }
+
+            .project-image svg {
+                width: 60%;
+                aspect-ratio: 1/1; 
+            }
+        }
+    }
+
+    /* detailpage */
+    .detail-page  {
+        .project-image, .detail-page-introduction-image {
+            display: none;
+        }
+
+        section {
+            display: flex !important;
+        }
+
+        .detail-page-subjects {
+            > .goals .goals-text,
+            .topics .title {
+                width: 100%;
+            }
+
+            .goals-wrapper {
+                flex-direction: row !important;
+            }
+        }
     }
 
 }
