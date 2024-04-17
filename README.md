@@ -3,6 +3,8 @@
 Welcome to my portfolio landing page! Here, you'll find everything you need to know about me, my skills, and the projects I've worked on. It's a one-stop destination to explore my professional journey and discover the diverse range of projects I've been involved in. Whether you're curious about my background, interested in my skills, or eager to see my projects in action, you'll find it all right here. Let's dive in and explore together!
 
 ## Why building my portfolio
+![banner-why](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/3e595751-e699-4bed-a09b-e8452516ee0d)
+
 Building my portfolio was not only a logical step but also an exciting opportunity to showcase my skills and experiences in the world of web development. Here's why I embarked on this journey
 
 ![small-banner-professional](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/b2bcd8e4-a0ed-4278-a47f-d3cc7d903695)
@@ -26,6 +28,8 @@ Building and maintaining my portfolio is an ongoing process that allows me to co
 
 
 ## My Journey
+![banner-journey](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/95283477-1316-4aaa-89ca-748a5d6c7f66)
+
 My journey in building this portfolio began with careful planning and ideation. I started by creating a flowchart and sketches to visualize the structure and layout of the portfolio. These early drafts helped me brainstorm ideas and refine my vision for the final product.
 
 ### About the Flowchart
@@ -161,6 +165,7 @@ Once the data is fetched and parsed, it is passed to the index.ejs file as varia
 By integrating these external APIs, I am able to keep my portfolio content up-to-date and provide users with relevant and engaging information about my skills and projects.
 
 ## Technologies
+![banner-technology](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/4c675a05-23fb-4156-86ce-ba09b4432cae)
 
 This portfolio landing page is built using the following technologies:
 
@@ -171,6 +176,7 @@ This portfolio landing page is built using the following technologies:
 - EJS (Embedded JavaScript templates)
 
 ## Installation
+![banner-instal](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/1df39ace-a024-4271-8318-b8ee083448a5)
 
 1. Clone the repository:
 https://github.com/LisaxLF/web-app-from-scratch-2324.git
@@ -180,6 +186,7 @@ https://github.com/LisaxLF/web-app-from-scratch-2324.git
 npm install
 
 ## Usage
+![banner-usage](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/a40fa895-f440-4788-9af8-61c1019ecf2a)
 
 1. Start the Express server:
   npm start
@@ -187,5 +194,6 @@ npm install
 2. Open your web browser and go to `http://localhost:3000` to view the landing page.
 
 ## License
+![banner-license](https://github.com/LisaxLF/web-app-from-scratch-2324/assets/112825800/352366ec-d883-4da3-8d17-a4ddaa8214f0)
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
