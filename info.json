@@ -2,10 +2,10 @@
     "firstName": "Lisa",
     "lastName": "Fokkinga",
     "avatar_url": "",
-    "age": 23,
+    "age": 25,
     "city": "Amsterdam",
-    "hobbies" : ["Traveling", "Music", "Gaming", "Exploring"],
-    "truthsAndLies" : ["Ik heb rood haar", "Ik hou van vis", "Mijn partner is een beroemd persoon"],
-    "bio" : "optioneel",
-    "favouriteAnimal" : "optioneel"
+    "hobbies" : ["Reizen", "Muziek", "Gamen", "Ontdekken"],
+    "truthsAndLies" : ["Ik ben half Colombiaans, half Duits", "Ik heb meer dan tien verschillende huisdieren gehad", "Ik heb een hond genaamd Dior"],
+    "bio" : "Hallo! Mijn naam is Lisa en ik ben een 25-jarige student uit Amsterdam. Ik hou van reizen, muziek luisteren, gamen en nieuwe plaatsen ontdekken.",
+    "favouriteAnimal" : "Wolf"
 }]
