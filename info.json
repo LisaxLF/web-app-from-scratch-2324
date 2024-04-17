@@ -1,7 +1,7 @@
 [{
     "firstName": "Lisa",
     "lastName": "Fokkinga",
-    "avatar_url": "",
+    "avatar_url": "/images/lisa.jpg",
     "age": 25,
     "city": "Amsterdam",
     "hobbies" : ["Reizen", "Muziek", "Gamen", "Ontdekken"],
