@@ -1,7 +1,7 @@
 [{
     "firstName": "Lisa",
     "lastName": "Fokkinga",
-    "avatar_url": "/images/lisa.jpg",
+    "avatar_url": "https://portfoliosite-lisafokkinga.onrender.com/images/lisaAvatar.jpeg",
     "age": 25,
     "city": "Amsterdam",
     "hobbies" : ["Reizen", "Muziek", "Gamen", "Ontdekken"],
