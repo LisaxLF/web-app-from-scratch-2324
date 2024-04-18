@@ -63,6 +63,9 @@ async function showProject() {
     // add the active class
     fullscreenProject.classList.add('active');
 
+    // add overfllow Y hidden to the body
+    document.body.style.overflow = 'hidden';
+
 }
 
 // Hide the project with animation
@@ -72,6 +75,9 @@ function closeProject() {
 
     // when active headers net to be shown  
     header.classList.remove('header-hide');
+
+    // remove overflow Y hidden to the body
+    document.body.style.overflowY = 'scroll';
 }
 
 function RenderTags(projectData) {
