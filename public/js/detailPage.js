@@ -6,6 +6,7 @@ async function showResources() {
     RenderResources(projectData);
 }
 
+// Fetch the project data
 async function fetchProjectData() {
     try {
         // Fetch the project data from the JSON file
@@ -27,6 +28,7 @@ async function fetchProjectData() {
     }
 }
 
+// Render the project data
 function RenderResources(projectData) {
     // Check if projectData and projectData.resources are defined
     if (!projectData || !projectData.resources) {
@@ -79,7 +81,6 @@ function RenderResources(projectData) {
 }
 
 // ASSIGNMENTS OVERVIEW
-
 async function showGoals() {
     const projectData = await fetchProjectData();
 
@@ -152,7 +153,6 @@ async function FindDataforRadio(projectData, radioValue) {
     console.log('Course not found');
     return null; // Return null if no matching course is found
 }
-
 
 function RenderGoals(courseData) {
     // clear the goals
@@ -315,8 +315,6 @@ function ImageSlider() {
         clearActiveImage();
     });
 }
-
-
 
 ImageSlider();
 showGoals();

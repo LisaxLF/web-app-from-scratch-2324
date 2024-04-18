@@ -1,19 +1,7 @@
-async function showFullScreen(projectTitle) {
-    console.log('showFullScreen:', projectTitle);
-    // await get project data
-    const projectData = await getProjectData(projectTitle);
+const header = document.querySelector('header');
+const fullscreenProject = document.querySelector('.fullscreen-project');
 
-    // await render project data
-    await renderProjectData(projectData);
-
-    // await show project
-    await showProject();
-
-    // Send to the project page route
-    sendToProjectPage(projectTitle);
-}
-
-//  Get assigned project data
+// Get assigned project data
 async function getProjectData(projectTitle) {
     // Fetch de projectgegevens op uit het JSON-bestand
     const projectsData = await fetch('https://raw.githubusercontent.com/LisaxLF/web-app-from-scratch-2324/main/projects.json');
@@ -39,7 +27,6 @@ async function renderProjectData(projectData) {
     projectTitle.textContent = projectData.title;
     projectType.textContent = projectData.type;
     projectDescription.textContent = projectData.description;
-    // projectLink.textContent = projectData.linkGithub;
 
     // render each tag
     RenderTags(projectData);
@@ -52,34 +39,7 @@ async function renderProjectData(projectData) {
     projectImage.src = projectData.mockup;
 }
 
-const header = document.querySelector('header');
-const fullscreenProject = document.querySelector('.fullscreen-project');
-
-// Show the project with animation
-async function showProject() {
-    // when active headers net to be hidden 
-    header.classList.add('header-hide');
-
-    // add the active class
-    fullscreenProject.classList.add('active');
-
-    // add overfllow Y hidden to the body
-    document.body.style.overflow = 'hidden';
-
-}
-
-// Hide the project with animation
-function closeProject() {
-    // remove the active class
-    fullscreenProject.classList.remove('active');
-
-    // when active headers net to be shown  
-    header.classList.remove('header-hide');
-
-    // remove overflow Y hidden to the body
-    document.body.style.overflowY = 'scroll';
-}
-
+// Render the tags
 function RenderTags(projectData) {
     // clear the tags
     const tagWrapper = document.querySelector('.project-tags');
@@ -96,6 +56,7 @@ function RenderTags(projectData) {
     });
 }
 
+// Render the resources
 function RenderResources(projectData) {
     // clear the resources
     const resourceWrapper = document.querySelector('.project-resources');
@@ -136,6 +97,47 @@ function RenderResources(projectData) {
             resourceName.classList.remove('icon-name-active');
         });
     });
+}
+
+// Show the project in fullscreen
+async function showFullScreen(projectTitle) {
+    console.log('showFullScreen:', projectTitle);
+    // await get project data
+    const projectData = await getProjectData(projectTitle);
+
+    // await render project data
+    await renderProjectData(projectData);
+
+    // await show project
+    await showProject();
+
+    // Send to the project page route
+    sendToProjectPage(projectTitle);
+}
+
+// Show the project with animation
+async function showProject() {
+    // when active headers net to be hidden 
+    header.classList.add('header-hide');
+
+    // add the active class
+    fullscreenProject.classList.add('active');
+
+    // add overfllow Y hidden to the body
+    document.body.style.overflow = 'hidden';
+
+}
+
+// Hide the project with animation
+function closeProject() {
+    // remove the active class
+    fullscreenProject.classList.remove('active');
+
+    // when active headers net to be shown  
+    header.classList.remove('header-hide');
+
+    // remove overflow Y hidden to the body
+    document.body.style.overflowY = 'scroll';
 }
 
 // Send to the project page route
